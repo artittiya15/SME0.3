@@ -1,0 +1,106 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "list": [
+      {
+        "Name and ID": "Papawarin Makcharoen <br> ID19288309",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      },
+      {
+        "Name and ID": "Papawarin Makcharoen ID19288309 ",
+        "LTV (THB)": 235000,
+        "Trans.": 3,
+        "Quantity (units)": 3,
+        "Total Price (THB)": 209930,
+        "Discount (THB)": 500,
+        "Total Revenue (THB)": 30990,
+        "Cash (THB)": 1990
+      }
+    ],
+    "summarytier": [
+      {
+        "totalcustomername": "Total",
+        "totalLTV": 305000,
+        "totalTrans": 200,
+        "tatalQuantity": 200,
+        "totalPrice": 405000,
+        "totalDiscount": 5000,
+        "totalrevenue": 95000,
+        "totalCash": 5000
+      }
+    ],
+    "summary": {
+      "Total Revenue(THB)": 180400,
+      "Total Member": 2934,
+      "Totaltransaction": 200,
+      "Total Quantity": 1200
+    }
+  }
+}
