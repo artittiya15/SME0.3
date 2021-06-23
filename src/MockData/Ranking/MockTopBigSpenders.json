@@ -1,0 +1,113 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "list": [
+      {
+        "Ranking": 1,
+        "์Name": "Bussaracum Wanasiri",
+        "ID": "091919001",
+        "Tier": "platinum",
+        "LTV(TBV)": 1700000,
+        "Total Revenue (THB)": 30990,
+        "Trans.": 7,
+        "Freq. Category": "Bag",
+        "Expensive Category": "Bag",
+        "Freq. Product": "Chanel Wallet",
+        "Expensive Product": "Chanel Classic"
+      },
+      {
+        "Ranking": 2,
+        "์Name": "Pitchanida Boonruksa",
+        "ID": "091919001",
+        "Tier": "silver",
+        "LTV(TBV)":30000,
+        "Total Revenue (THB)": 30990,
+        "Trans.": 1,
+        "Freq. Category": "Bag",
+        "Expensive Category": "Bag",
+        "Freq. Product": "Boyy Wallet",
+        "Expensive Product": "Balenciaga"
+      },
+      {
+        "Ranking": 3,
+        "์Name": "Chutipa Nakurl",
+        "ID": "091919001",
+        "Tier": "gold",
+        "LTV(TBV)": 300000,
+        "Total Revenue (THB)": 30990,
+        "Trans.": 3,
+        "Freq. Category": "Bag",
+        "Expensive Category": "Shoes",
+        "Freq. Product": "Chanel Wallet",
+        "Expensive Product": "Chanel Classic"
+      },
+      {
+        "Ranking": 4,
+        "์Name": "Matuphom Siriwattana",
+        "ID": "091919001",
+        "Tier": "gold",
+        "LTV(TBV)": 300000,
+        "Total Revenue (THB)": 30990,
+        "Trans.": 5,
+        "Freq. Category": "Bag",
+        "Expensive Category": "Bag",
+        "Freq. Product": "Chanel Wallet",
+        "Expensive Product": "Chanel Classic"
+      },
+      {
+        "Ranking": 5,
+        "์Name": "Ponchin Kitrungrerng",
+        "ID": "091919001",
+        "Tier": "silver",
+        "LTV(TBV)": 4000,
+        "Total Revenue (THB)": 30990,
+        "Trans.": 2,
+        "Freq. Category": "Shoes",
+        "Freq. Product": "Chanel Wallet",
+        "Expensive Category": "Boy",
+        "Expensive Product": "Boy"
+      },
+      {
+        "Ranking": 6,
+        "์Name": "Kunyarut Ngammurng",
+        "ID":" 091919001",
+        "Tier": "gold",
+        "LTV(THB)":300000,
+        "Total Revenue (THB)": 30990,
+        "Trans.": 6,
+        "Freq. Category": "Bag",
+        "Expensive Category": "Bag",
+        "Freq. Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"
+      }
+    ],
+    "summarytier": [
+      {
+        "TotalRanking": "Total",
+        "Total์Name": "",
+        "TotalID": "",
+        "TotalTier": "",
+        "TotalLTV(THB)": 2634000,
+        "Total Revenue (THB)": 2634000,
+        "Freq. Category": 24
+      }
+    ],
+    "summary": [
+      {
+        "Members": 40,
+        "Revenue(THB)": 2000500
+      },
+      {
+        "Transactions": 230,
+        "LTV(THB)": 12000500
+      },
+      {
+        "Meso Fat (Frequency)": 45
+      },
+      {
+        "Lift up aging (Expensive)": 50000
+      }
+    ]
+  }
+}

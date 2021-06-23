@@ -1,0 +1,96 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "list": [
+      {
+        "Ranking": 1,
+        "Product Code": 3883949483,
+        "Product Name": "Botox",
+        "Transactions": 3,
+        "Quantity (units)": 78,
+        "Total Revenue (THB)": 30990,
+        "Total Member": 310
+      },
+      {
+        "Ranking": 2,
+        "Product Code": "3883949483",
+        "Product Name": "Facial Liftup",
+        "Transactions": 3,
+        "Quantity (units)": 67,
+        "Total Revenue (THB)": 30990,
+        "Total Member": 110
+      },
+      {
+        "Ranking": 3,
+        "Product Code": "3883949483",
+        "Product Name": "Hair Laser",
+        "Transactions": 3,
+        "Quantity (units)": 45,
+        "Total Revenue (THB)": 30990,
+        "Total Member": 900
+      },
+      {
+        "Ranking": 1,
+        "Product Code": "3883949483",
+        "Product Name": "Leg laser",
+        "Transactions": 3,
+        "Quantity (units)": 35,
+        "Total Revenue (THB)": 30990,
+        "Total Member": 20
+      },
+      {
+        "Ranking": 2,
+        "Product Code": "3883949483",
+        "Product Name": "Meso Fat",
+        "Transactions": 3,
+        "Quantity (units)": 30,
+        "Total Revenue (THB)": 30990,
+        "Total Member": 0
+      },
+      {
+        "Ranking": 3,
+        "Product Code": "3883949483",
+        "Product Name": "Super Young",
+        "Transactions": 3,
+        "Quantity (units)": 21,
+        "Total Revenue (THB)": 30990,
+        "Total Member": 250
+      }
+    ],
+    "summarytier": [
+      {
+        
+        "TotalRanking": "Total",
+        "TotalProduct Code": "",
+        "TotalProduct Name": "",
+        "TotalTransactions": 200,
+        "TotalQuantity (units)": 48,
+        "Total Revenue (THB)": 43990,
+        "Total Member": 230
+      }
+    ],
+    "summary": {
+      "Total": {
+        "Transactions": 240,
+        "Revenue(THB)": 2000500,
+        "Quantity (units)": 120
+      },
+      "1. Botox": {
+        "Transactions": 240,
+        "Revenue (THB)": 2000500,
+        "Quantity (units)": 120
+      },
+      "2. Facial Liftup": {
+        "Transactions": 240,
+        "Revenue (THB)": 2000500,
+        "Quantity (units)": 120
+      },
+      "3. Hair Laser": {
+        "Transactions": 240,
+        "Revenue (THB)": 2000500,
+        "Quantity (units)": 120
+      }
+    }
+  }
+}

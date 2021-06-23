@@ -89,7 +89,7 @@
         "totalcustomername": "Total",
         "totalLTV": 305000,
         "totalTrans": 200,
-        "tatalQuantity": 200,
+        "totalQuantity": 200,
         "totalPrice": 405000,
         "totalDiscount": 5000,
         "totalrevenue": 95000,
@@ -99,7 +99,7 @@
     "summary": {
       "Total Revenue(THB)": 180400,
       "Total Member": 2934,
-      "Totaltransaction": 200,
+      "Total Transaction": 200,
       "Total Quantity": 1200
     }
   }

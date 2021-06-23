@@ -1,0 +1,125 @@
+{
+    "code": 0,
+    "msg": "",
+    "data": {
+      "list": [
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Name and ID": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Name and ID": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Name and ID": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Name and ID": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Payment ID": "#19288309330298",
+          "Transaction(times)": 3,
+          "Quantity (units)": 3,
+          "Total Price (THB)": 209930,
+          "Discount (THB)": 0,
+          "Total Revenue (THB)": 30990,
+          "Cash (THB)": 1990,
+          "Transfer (THB)":10220,
+          "Credit/Debit(THB)":10220
+        }
+      ],
+      "summarytier": [
+        {
+            "TotalDate and Time": " ",
+            "TotalPayment ID": "",
+            "TotalTransaction(times)": 200,
+            "TotalQuantity (units)": 200,
+            "Total Price (THB)": 405000,
+            "TotalDiscount (THB)": 0,
+            "Total Revenue (THB)": 95000,
+            "TotalCash (THB)": 5000,
+            "TotalTransfer (THB)":40000,
+            "TotalCredit/Debit(THB)":20000
+        }
+      ],
+      "summary": {
+        "Total Walk-In": 230,
+        "Total Revenue(THB)": 3002934,
+        "Total Transaction": 170394,
+        "Total Quantity (units)": 300
+      }
+    }
+  }
+  

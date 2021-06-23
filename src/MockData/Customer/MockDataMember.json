@@ -1,0 +1,81 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "list": [
+      {
+        "์Name": "Bussaracum Wanasiri",
+        "ID": "091919001",
+        "Tier": "platinum",
+        "LTV(TBV)": 1700000,
+        "Total Transaction": 17000,
+        "Total Point": 7,
+        "Remaining Point": 0
+      },
+      {
+        "์Name": "Pitchanida Boonruksa",
+        "ID": "091919001",
+        "Tier": "silver",
+        "LTV(TBV)": 30000,
+        "Total Transaction": 1,
+        "Total Point": 300,
+        "Remaining Point": 0
+      },
+      {
+        "์Name": "Chutipa Nakurl",
+        "ID": "091919001",
+        "Tier": "gold",
+        "LTV(TBV)": 300000,
+        "Total Transaction": 3,
+        "Total Point": 3000,
+        "Remaining Point": 0
+      },
+      {
+        "์Name": "Matuphom Siriwattana",
+        "ID": "091919001",
+        "Tier": "gold",
+        "LTV(TBV)": 300000,
+        "Total Transaction": 5,
+        "Total Point": 3000,
+        "Remaining Point": 0
+      },
+      {
+        "์Name": "Ponchin Kitrungrerng",
+        "ID": "091919001",
+        "Tier": "silver",
+        "LTV(TBV)": 4000,
+        "Total Transaction": 2,
+        "Total Point": 400,
+        "Remaining Point": 0
+      },
+      {
+        "์Name": "Kunyarut Ngammurng",
+        "ID": " 091919001",
+        "Tier": "gold",
+        "LTV(THB)": 300000,
+        "Total Transaction": 6,
+        "Total Point": 3000,
+        "Remaining Point": 0
+      }
+    ],
+    "summarytier": [
+      {
+        "TotalRanking": "Total",
+        "Total์Name": "",
+        "TotalID": "",
+        "TotalTier": "",
+        "TotalLTV(THB)": 2634000,
+        "Total Revenue (THB)": 2634000,
+        "Freq. Category": 24
+      }
+    ],
+    "summary": 
+      {
+        "Total Member": 150,
+        "Total Revenue(THB)": 2634000,
+        "Total Transaction": 24,
+        "Total Points": 26340
+      }
+    
+  }
+}

@@ -1,0 +1,63 @@
+
+{
+    "code": 0,
+    "msg": "",
+    "data": {
+      "list": [
+        {
+          "Ranking": 1,
+          "Payment Method": "Credit/Debit",
+          "Transactions": 180,
+          "Total Revenue (THB)": 30990,
+          "Bank Name": "SCB",
+          "Credit Card Type": "Wisdom"
+          
+        },
+        {
+          "Ranking": 2,
+          "Payment Method": "Cash",
+          "Transactions": 90,
+          "Total Revenue (THB)": 30990,
+          "Bank Name": "",
+          "Credit Card Type": ""
+          
+        },
+        {
+          "Ranking": 3,
+          "Payment Method": "Transfer",
+          "Transactions": 3,
+          "Total Revenue (THB)": 30900,
+          "Bank Name": "SCB",
+          "Credit Card Type": ""
+          
+        }
+     
+      ],
+      "summarytier": [
+        {
+          "totalcustomername": "Total",
+          "Transactions": 240,
+          "Total Revenue (THB)": 9500
+        }
+      ],
+      "summary": {
+        "Total": {
+          "Transactions": 240,
+          "Revenue(THB)": 2000500
+        },
+        "1. Credit/Debit": {
+          "Transactions": 240,
+          "Revenue (THB)": 2000500
+        },
+        "2. Cash": {
+          "Transactions": 240,
+          "Revenue (THB)": 2000500
+        },
+        "3. Transfer": {
+          "Transactions": 240,
+          "Revenue (THB)": 2000500
+        }
+      }
+    }
+  }
+  
