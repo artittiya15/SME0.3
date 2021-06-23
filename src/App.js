@@ -99,21 +99,6 @@ function App() {
             <Tiers />
           </Route>
         </Switch>
-        {/* <Void/> */}
-        {/* <Transection/> */}
-        {/* <RevenueWalkIn /> */}
-        {/* <RevenueMember/> */}
-        {/* <TopProduct/> */}
-        {/* <TopPaymentMethods/> */}
-        {/* <TopProductCategory/> */}
-        {/* <TopBigSpender/> */}
-        {/* <TopFrequentMembers/> */}
-        {/* <BigSpender/> */}
-        {/* <Frequency/> */}
-        {/* <Member/> */}
-        {/* <WalkIn/> */}
-        {/* <MemberAndWalkIn/> */}
-        {/* <FilterTopProduct /> */}
       </div>
     </Router>
   );

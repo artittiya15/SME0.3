@@ -13,7 +13,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
