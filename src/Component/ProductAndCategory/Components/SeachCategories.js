@@ -7,12 +7,6 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { makeStyles, fade } from "@material-ui/core/styles";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
-import Paper from "@material-ui/core/Paper";
-import Popper from "@material-ui/core/Popper";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuList from "@material-ui/core/MenuList";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import List from "@material-ui/core/List";
@@ -21,8 +15,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
-import { ReactComponent as Botoxallergan } from "../../../Assets/Images/Icons/Botoxallergan.svg";
-import MockDataContact from "../../../MockData/ProductAndCategory/MockDataContact.json"
+import Botoxallergan from "../../../Assets/Images/Icons/Botoxallergan.png";
+import MockDataContact from "../../../MockData/ProductAndCategory/MockDataContact.json";
 const useStyles = makeStyles((theme) => ({
   root: { width: "100%", backgroundColor: theme.palette.background.paper },
   ButtonGroup: {
@@ -41,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: 0,
     width: "700px",
- 
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -70,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function SearchCategories(props) {
   const classes = useStyles();
   const [Search, setSearch] = useState();
@@ -95,10 +87,7 @@ export default function SearchCategories(props) {
 
   return (
     <>
-      <ButtonGroup
-        aria-label="split button"
-        className={classes.ButtonGroup}
-      >
+      <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
         <Button style={{ border: "none" }}>
           {selectedCategories && selectedCategories.CategoriesName}
         </Button>
@@ -128,9 +117,7 @@ export default function SearchCategories(props) {
         >
           {"Select Category"}
         </DialogTitle>
-        <DialogActions
-          style={{ justifyContent: "center" }}
-        >
+        <DialogActions style={{ justifyContent: "center" }}>
           <div
             style={{
               display: "flex",
@@ -147,7 +134,7 @@ export default function SearchCategories(props) {
             <SearchIcon />
             <InputBase
               placeholder="Search…"
-              style={{ paddingLeft: 10, width: "100%"}}
+              style={{ paddingLeft: 10, width: "100%" }}
               inputProps={{ "aria-label": "search" }}
             />
             <Button
@@ -163,10 +150,7 @@ export default function SearchCategories(props) {
             </Button>
           </div>
         </DialogActions>
-        <DialogContent
-          style={{ width: 600, padding: 0 }}
-        
-        >
+        <DialogContent style={{ width: 600, padding: 0 }}>
           <List
             component="nav"
             className={classes.root}
@@ -175,12 +159,16 @@ export default function SearchCategories(props) {
             {Search &&
               Search.list.map((item, index) => {
                 return (
-                  <ListItem key={index} onClick={() => {
-                    setSelectedCategories(item);
-                  }} style={{cursor: "pointer"}} >
+                  <ListItem
+                    key={index}
+                    onClick={() => {
+                      setSelectedCategories(item);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
                     <ListItemAvatar>
                       <Avatar>
-                        <Botoxallergan />
+                        <img src={Botoxallergan} alt="avatar" />
                       </Avatar>
                     </ListItemAvatar>
                     <ListItemText

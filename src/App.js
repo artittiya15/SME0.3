@@ -25,7 +25,7 @@ import EarnPoints from "./Component/Loyalty/EarnPoints";
 import RedeemPoints from "./Component/Loyalty/RedeemPoints";
 import Tiers from "./Component/Loyalty/Tiers";
 import RemainingPoints from "./Component/Loyalty/RemainingPoints"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
