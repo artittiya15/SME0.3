@@ -20,7 +20,11 @@ import WalkIn from "./Component/Customer/Walk-In";
 import MemberAndWalkIn from "./Component/Customer/MemberAndWalk-In";
 import Products from "./Component/ProductAndCategory/Products";
 import Category from "./Component/ProductAndCategory/Categories";
-// import FilterTopProduct from "./Component/Ranking/FilterListTopProduct/FilterTopProduct";
+import TotalPoints from "./Component/Loyalty/TotalPoints";
+import EarnPoints from "./Component/Loyalty/EarnPoints";
+import RedeemPoints from "./Component/Loyalty/RedeemPoints";
+import Tiers from "./Component/Loyalty/Tiers";
+import RemainingPoints from "./Component/Loyalty/RemainingPoints"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
@@ -78,6 +82,21 @@ function App() {
           </Route>
           <Route path="/Categories">
             <Category />
+          </Route>
+          <Route path="/TotalPoints">
+            <TotalPoints />
+          </Route>
+          <Route path="/EarnPoints">
+            <EarnPoints />
+          </Route>
+          <Route path="/RedeemPoints">
+            <RedeemPoints />
+          </Route>
+          <Route path="/RemainingPoints">
+            <RemainingPoints/>
+          </Route>
+          <Route path="/Tiers">
+            <Tiers />
           </Route>
         </Switch>
         {/* <Void/> */}

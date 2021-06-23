@@ -22,7 +22,7 @@ import Divider from "@material-ui/core/Divider";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import { ReactComponent as Botoxallergan } from "../../../Assets/Images/Icons/Botoxallergan.svg";
-import MockDataDialog from "../../../MockData/ProductAndCategory/MockDataDialog.json";
+import MockDataContact from "../../../MockData/ProductAndCategory/MockDataContact.json"
 const useStyles = makeStyles((theme) => ({
   root: { width: "100%", backgroundColor: theme.palette.background.paper },
   ButtonGroup: {
@@ -41,10 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: 0,
     width: "700px",
-    // [theme.breakpoints.up("sm")]: {
-    //   marginLeft: theme.spacing(1),
-    //   // width: "auto",
-    // },
+ 
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -74,16 +71,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function SearchProduct(props) {
+export default function SearchCategories(props) {
   const classes = useStyles();
   const [Search, setSearch] = useState();
-  const [selectedProduct, setSelectedProduct] = React.useState();
+  const [selectedCategories, setSelectedCategories] = React.useState();
 
   useEffect(() => {
-    async function fetchSearchProduct() {
-      setSearch(MockDataDialog.data);
+    async function fetchSearchCategories() {
+      setSearch(MockDataContact.data);
     }
-    fetchSearchProduct();
+    fetchSearchCategories();
   }, []);
 
   const [openDialog, setOpenDialog] = React.useState(false);
@@ -103,7 +100,7 @@ export default function SearchProduct(props) {
         className={classes.ButtonGroup}
       >
         <Button style={{ border: "none" }}>
-          {selectedProduct && selectedProduct.productName}
+          {selectedCategories && selectedCategories.CategoriesName}
         </Button>
         <Button
           style={{ border: "none" }}
@@ -129,10 +126,9 @@ export default function SearchProduct(props) {
             fontSize: " 40px",
           }}
         >
-          {"Select Product"}
+          {"Select Category"}
         </DialogTitle>
         <DialogActions
-          // className={classes.searchIcon}
           style={{ justifyContent: "center" }}
         >
           <div
@@ -152,7 +148,6 @@ export default function SearchProduct(props) {
             <InputBase
               placeholder="Search…"
               style={{ paddingLeft: 10, width: "100%"}}
-             
               inputProps={{ "aria-label": "search" }}
             />
             <Button
@@ -170,7 +165,7 @@ export default function SearchProduct(props) {
         </DialogActions>
         <DialogContent
           style={{ width: 600, padding: 0 }}
-          // className={classes.search}
+        
         >
           <List
             component="nav"
@@ -181,7 +176,7 @@ export default function SearchProduct(props) {
               Search.list.map((item, index) => {
                 return (
                   <ListItem key={index} onClick={() => {
-                    setSelectedProduct(item);
+                    setSelectedCategories(item);
                   }} style={{cursor: "pointer"}} >
                     <ListItemAvatar>
                       <Avatar>
@@ -189,8 +184,8 @@ export default function SearchProduct(props) {
                       </Avatar>
                     </ListItemAvatar>
                     <ListItemText
-                      primary={item.productName}
-                      secondary={item.productNumber}
+                      primary={item.CategoryName}
+                      secondary={item.CategoryNumber}
                     />
                   </ListItem>
                 );

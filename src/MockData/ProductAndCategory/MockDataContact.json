@@ -1,0 +1,39 @@
+{
+    "code": 0,
+    "msg": "",
+    "data": {
+      "list": [
+        {
+          "image": "",
+          "CategoryName": "Shirt ",
+          "CategoryNumber": ""
+        },
+        {
+          "image": "",
+          "CategoryName": "Shoes ",
+          "CategoryNumber": ""
+        },
+        {
+          "image": "",
+          "CategoryName": "Wallet",
+          "CategoryNumber": ""
+        },
+        {
+          "image": "",
+          "CategoryName": "Wristwatch ",
+          "CategoryNumber": " "
+        },
+        {
+          "image": "",
+          "CategoryName": "Dress ",
+          "CategoryNumber": ""
+        },
+        {
+          "image": "",
+          "CategoryName": "Dress ",
+          "CategoryNumber": " "
+        }
+      ]
+    }
+  }
+  
