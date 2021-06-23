@@ -200,16 +200,40 @@ export default function SearchProduct(props) {
           // className={classes.searchIcon}
           style={{ justifyContent: "center" }}
         >
-          <div style={{width: "100%", marginLeft: 80, marginRight: 80, borderColor: "black", borderRadius: 20, borderWidth: 2, borderStyle: "inset" }}>
+          <div
+            style={{
+              display: "flex",
+              paddingLeft: 10,
+              alignItems: "center",
+              width: "100%",
+              marginLeft: 80,
+              marginRight: 80,
+              borderColor: "black",
+              borderRadius: 20,
+              borderStyle: "inset",
+            }}
+          >
             <SearchIcon />
             <InputBase
               placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
+              style={{ paddingLeft: 10, width: "100%"}}
+              // classes={{
+              //   root: classes.inputRoot,
+              //   input: classes.inputInput,
+              // }}
               inputProps={{ "aria-label": "search" }}
             />
+            <Button
+              style={{
+                borderRadius: 0,
+                backgroundColor: "orange",
+                borderTopRightRadius: 20,
+                borderBottomRightRadius: 20,
+                fontSize: 12,
+              }}
+            >
+              Search
+            </Button>
           </div>
         </DialogActions>
         <DialogContent
@@ -245,6 +269,7 @@ export default function SearchProduct(props) {
           <Button
             onClick={handleCloseDialog}
             style={{
+              borderRadius: 0,
               backgroundColor: "#C4C4C4",
               width: "-webkit-fill-available",
               margin: 0,
@@ -256,6 +281,7 @@ export default function SearchProduct(props) {
           <Button
             onClick={handleCloseDialog}
             style={{
+              borderRadius: 0,
               backgroundColor: "#FA9917",
               width: "-webkit-fill-available",
               color: "#eff2f7",
