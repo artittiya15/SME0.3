@@ -37,11 +37,15 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Today",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Last Month",
+    selected: false,
+  },
+  {
+    filterName: "Last Year",
     selected: false,
   },
   {

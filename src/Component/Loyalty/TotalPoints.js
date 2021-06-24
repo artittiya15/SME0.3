@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataTotalPoints from "../../MockData/TOTALPoints/MockDataTotalPoints.json";
+import MockDataTotalPoints from "../../MockData/TotalPoints/MockDataTotalPoints.json";
 import TableRevenue from "./../Share/TableRevenue";
 import { useReactToPrint } from "react-to-print";
 
@@ -33,19 +33,23 @@ const useStyles = makeStyles((theme) => ({
 
 const filter = [
   {
-    filterName: "All",
+    filterName: "All Tiers",
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Standard",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Bronze",
     selected: false,
   },
   {
-    filterName: "Custom Date",
+    filterName: "Silver",
+    selected: false,
+  },
+  {
+    filterName: "Gold",
     selected: false,
   },
 ];
@@ -87,7 +91,7 @@ export default function TopBigSpender() {
         )}
       </Grid>
       <Grid item xs={12} container>
-        {topBigSpender && <CardTotal type="mixed" value={topBigSpender.summary} />}
+        {topBigSpender && <CardTotal type="single" value={topBigSpender.summary} />}
       </Grid>
       <Grid item xs={12} container>
         {topBigSpender && <TableRevenue data={topBigSpender} />}

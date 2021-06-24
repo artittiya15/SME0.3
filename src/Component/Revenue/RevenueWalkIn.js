@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataRevenueMember from "../../MockData/Revenue/RevenueMember.json"
+import MockDataReavenueWalkIn from "../../MockData/Revenue/MockDataReavenueWalkIn.json";
 import TableRevenue from "./../Share/TableRevenue";
 import { useReactToPrint } from "react-to-print";
 
@@ -56,7 +56,7 @@ export default function RevenueWalkIn() {
   const [RevenueWalkIn, setRevenueWalkIn] = useState();
 
   async function fetchRevenueMember() {
-    setRevenueWalkIn(MockDataRevenueMember.data);
+    setRevenueWalkIn(MockDataReavenueWalkIn.data);
   }
 
   useEffect(() => {

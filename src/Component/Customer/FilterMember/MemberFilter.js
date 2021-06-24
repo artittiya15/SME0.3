@@ -97,7 +97,7 @@ export default function MemberFilter({ filterData }) {
         break;
       case "Standard":
         break;
-      case "Broze":
+      case "Bronze":
         break;
       case "Silver":
         break;

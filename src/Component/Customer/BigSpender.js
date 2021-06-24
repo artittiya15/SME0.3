@@ -41,7 +41,7 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Broze",
+    filterName: "Bronze",
     selected: false,
   },
   {

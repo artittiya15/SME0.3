@@ -33,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     backgroundColor: "white",
     zIndex: 999,
+    fontFamily: "sans-serif",
+    fontWeight: 600,
   },
   ColorText: {
     color: "#828282",

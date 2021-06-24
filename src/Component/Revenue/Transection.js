@@ -5,10 +5,9 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataRevenueMember from "../../MockData/Revenue/RevenueMember.json"
-import TableRevenue from "./../Share/TableRevenue";
+import MockDataTransaction from "../../MockData/Revenue/MockDataTransaction.json";
 import { useReactToPrint } from "react-to-print";
-
+import TableRevenue from "../Share/TableRevenue"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -56,7 +55,7 @@ export default function Transection() {
   const [RevenueMember, setRevenueMember] = useState();
 
   async function fetchRevenueMember() {
-    setRevenueMember(MockDataRevenueMember.data);
+    setRevenueMember(MockDataTransaction.data);
   }
 
   useEffect(() => {

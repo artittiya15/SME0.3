@@ -77,10 +77,15 @@
       }
     ],
     "summary": {
-      "Redeeming Rate": "55",
       "Total Earn (points)": 15000,
-      "Total Redeem (points)": 500,
-      "Total Remaining (points)": 10000
+      "Total Member": 35,
+      "Redeem(points) from Tiers": {
+        "standard": 500,
+        "bronze": 500,
+        "silver": 500,
+        "gold": 500,
+        "platinum": 500
+      }
     }
   }
 }

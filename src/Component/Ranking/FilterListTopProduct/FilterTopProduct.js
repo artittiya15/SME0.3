@@ -9,6 +9,7 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
+import InputLabel from '@material-ui/core/InputLabel';
 
 const useStyles = makeStyles((theme) => ({
   ButtonGroup: {
@@ -17,12 +18,13 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     background: "white",
     marginRight: theme.spacing(2),
+    textTransform: "none",
   },
 }));
 const options = [
-  "Shot By",
-  "Squash and merge",
-  "Rebase and merge",
+  "All",
+  "Shot By item",
+  "Shot By Revenue",
 ];
 
 export default function SplitButton() {
@@ -93,10 +95,13 @@ export default function SplitButton() {
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu">
+                <InputLabel htmlFor="age-native-helper">Shot By</InputLabel>
                   {options.map((option, index) => (
+                    
                     <MenuItem
+
                       key={option}
-                      disabled={index === 2}
+                      disabled={index === 3}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
                     >

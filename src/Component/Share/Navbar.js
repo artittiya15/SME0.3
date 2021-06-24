@@ -185,7 +185,7 @@ export default function MenuAppBar() {
             "MemberAndWalkIn",
             "WalkIn",
           ].map((text, index) => (
-            <ListItem button key={text}>
+            <ListItem button key={index}>
               <Link to={"/" + text}>{text}</Link>
             </ListItem>
           ))}
@@ -193,7 +193,7 @@ export default function MenuAppBar() {
         <Typography>ProductAndCategory</Typography>
         <List>
           {["Categories ", "Products"].map((text, index) => (
-            <ListItem button key={text}>
+            <ListItem button key={index}>
               <Link to={"/" + text}>{text}</Link>
             </ListItem>
           ))}
@@ -201,14 +201,15 @@ export default function MenuAppBar() {
         <Typography>Loyalty</Typography>
         <List>
           {[
+            "TotalPoints",
             "EarnPoints ",
             "RedeemPoints",
             "RemainingPoints ",
             "Tiers ",
-            "TotalPoints",
+            
           ].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
+            <ListItem button key={index}>
+              <Link to={"/" + text}>{text}</Link>
             </ListItem>
           ))}
         </List>
