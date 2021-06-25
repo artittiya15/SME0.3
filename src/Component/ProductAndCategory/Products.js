@@ -9,6 +9,7 @@ import MockDataProduct from "../../MockData/ProductAndCategory/MockDataProduct.j
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import SearchProduct from "./Components/SearchProduct"
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,7 +75,7 @@ export default function Products(props) {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Product Report</Typography>
       </Grid>
       <Grid
         item

@@ -8,6 +8,7 @@ import CardOfEarnPoints from "./Components/CardOfEarnPoints";
 import MockDataRedeemPoints from "../../MockData/TOTALPoints/MockDataRedeemPoints.json";
 import Table from "../Share/Table";
 import { useReactToPrint } from "react-to-print";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,7 +77,7 @@ export default function RedeemPoints() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Total Redeem Points</Typography>
       </Grid>
       <Grid
         item

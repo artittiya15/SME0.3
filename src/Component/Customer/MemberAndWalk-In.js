@@ -8,7 +8,7 @@ import CardTotal from "./../Share/CardTotal";
 import MockDataMemberWalkIn from"../../MockData/Customer/MockDataMemberWalkIn.json";
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
-
+import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -79,7 +79,7 @@ export default function MemberAndWalkIn() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>All Customer Report</Typography>
       </Grid>
       <Grid
         item

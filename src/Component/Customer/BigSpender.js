@@ -8,6 +8,7 @@ import CardTotal from "./../Share/CardTotal";
 import MockDataBigSpender from "../../MockData/Customer/MockDataBigSpender.json";
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,7 +78,7 @@ export default function BigSpender() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Big Spenders</Typography>
       </Grid>
       <Grid
         item

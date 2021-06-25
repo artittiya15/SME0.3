@@ -9,6 +9,7 @@ import MockDataCategory from "../../MockData/ProductAndCategory/MockDataCategory
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import SearchCategories from "./Components/SearchCategories";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,7 +75,7 @@ export default function Categories(props) {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Category Report</Typography>
       </Grid>
       <Grid
         item

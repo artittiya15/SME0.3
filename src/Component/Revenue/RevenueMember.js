@@ -8,6 +8,7 @@ import CardTotal from "./../Share/CardTotal";
 import MockDataRevenueMember from "../../MockData/Revenue/RevenueMember.json"
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,7 +79,7 @@ export default function RevenueMember() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Member Revenue Report</Typography>
       </Grid>
       <Grid
         item

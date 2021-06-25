@@ -8,6 +8,7 @@ import CardTotal from "./../Share/CardTotal";
 import MockDataTransaction from "../../MockData/Revenue/MockDataTransaction.json";
 import { useReactToPrint } from "react-to-print";
 import Table from "../Share/Table"
+import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -77,7 +78,7 @@ export default function Transection() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        {props.name}
+       <Typography variant="h5" style={{fontWeight:"bold" ,marginLeft: "10px"}}>Transactions Report</Typography>
       </Grid>
       <Grid
         item
