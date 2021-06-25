@@ -101,7 +101,7 @@ export default function MenuAppBar() {
           <ChevronLeftIcon />
           <Box className={classes.title}>
             <img
-              src={"./images/Asset 1@2x.png"}
+              src={"./images/Asset11.svg"}
               alt=""
               width="103px"
               height="50px"
