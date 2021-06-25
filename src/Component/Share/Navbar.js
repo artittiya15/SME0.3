@@ -13,6 +13,7 @@ import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { Link } from "react-router-dom";
+import Logo from "./../../Assets/Images/Logo.png";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -101,7 +102,7 @@ export default function MenuAppBar() {
           <ChevronLeftIcon />
           <Box className={classes.title}>
             <img
-              src={"./images/Asset11.svg"}
+              src={Logo}
               alt=""
               width="103px"
               height="50px"
