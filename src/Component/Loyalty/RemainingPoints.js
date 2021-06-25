@@ -54,15 +54,15 @@ const filter = [
   },
 ];
 
-export default function RedeemPoints() {
+export default function RemainingPoints() {
   const componentRef = useRef();
-  const [redeemPoints, setRedeemPoints] = useState();
+  const [remainingPoints, setRemainingPoints] = useState();
 
   useEffect(() => {
-    async function fetchRedeemPoints() {
-      setRedeemPoints(MockDataRemainingPoints.data);
+    async function fetchRemainingPoints() {
+      setRemainingPoints(MockDataRemainingPoints.data);
     }
-    fetchRedeemPoints();
+    fetchRemainingPoints();
   }, []);
 
   const handlePrint = useReactToPrint({
@@ -86,15 +86,15 @@ export default function RedeemPoints() {
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
         <FilterList filterData={filter} />
-        {redeemPoints && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={redeemPoints} />
+        {remainingPoints && (
+          <ActionBar handlePrint={handlePrint} dataExportCSV={remainingPoints} />
         )}
       </Grid>
       <Grid item xs={12} container>
-        {redeemPoints && <CardOfEarnPoints type="single" value={redeemPoints.summary} />}
+        {remainingPoints && <CardOfEarnPoints type="single" value={remainingPoints.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {redeemPoints && <Table data={redeemPoints} />}
+        {remainingPoints && <Table data={remainingPoints} />}
       </Grid>
     </Grid>
   ));

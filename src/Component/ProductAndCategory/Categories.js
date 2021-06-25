@@ -8,7 +8,7 @@ import CardTotal from "./../Share/CardTotal";
 import MockDataCategory from "../../MockData/ProductAndCategory/MockDataCategory.json";
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
-import SearchCategories from "./Components/SeachCategories";
+import SearchCategories from "./Components/SearchCategories";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -19,7 +19,7 @@ import Member from "./Component/Customer/Member";
 import WalkIn from "./Component/Customer/Walk-In";
 import MemberAndWalkIn from "./Component/Customer/MemberAndWalk-In";
 import Products from "./Component/ProductAndCategory/Products";
-import Category from "./Component/ProductAndCategory/Categories";
+import Categories from "./Component/ProductAndCategory/Categories";
 import TotalPoints from "./Component/Loyalty/TotalPoints";
 import EarnPoints from "./Component/Loyalty/EarnPoints";
 import RedeemPoints from "./Component/Loyalty/RedeemPoints";
@@ -89,7 +89,7 @@ function App() {
               <Products />
             </Route>
             <Route path="/Categories">
-              <Category />
+              <Categories />
             </Route>
             <Route path="/TotalPoints">
               <TotalPoints />

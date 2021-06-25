@@ -54,7 +54,7 @@ const filter = [
   },
 ];
 
-export default function EarnPoint() {
+export default function EarnPoints() {
   const componentRef = useRef();
   const [earnPoint, setEarnPoint] = useState();
 
