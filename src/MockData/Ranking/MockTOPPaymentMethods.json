@@ -36,8 +36,11 @@
       "summarytier": [
         {
           "totalcustomername": "Total",
+          "Payment Method": "",
           "Transactions": 240,
-          "Total Revenue (THB)": 9500
+          "Total Revenue (THB)": 9500,
+          "Bank Name": "",
+          "Credit Card Type": ""
         }
       ],
       "summary": {

@@ -1,0 +1,103 @@
+{
+    "code": 0,
+    "msg": "",
+    "data": {
+      "list": [
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"
+          
+        },
+        {
+          "Date and Time": "12 July 2020<br>10.30 PM ",
+          "Name and ID": "Papawarin Makcharoen<br>#334219288309",
+          "TransactionMember": 288997360001,
+          "Total Revenue (THB)": 30990,
+          "Payment Method": "Cash",
+          "Users":"Admin",
+          "Void Detail":"Customer canceled"          
+        }
+      ],
+      "summarytier": [
+        {
+            "TotalDate and Time": "Total ",
+            "TotalName and ID": "",
+            "TotalTransactionMember": "",
+            "Total Revenue (THB)": 95000,
+            "TotalPayment Method": "",
+            "TotalUsers":"",
+            "TotalVoid Detail":""}],
+
+      "summary": {
+        
+        "Total Revenue(THB)": 180400,
+        "Transactions":15,
+        "Wrong Payment (Payment)":2,
+        "Customer Canceled":1
+    }
+}}

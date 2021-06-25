@@ -9,9 +9,7 @@
         "Transactions": 3,
         "Quantity (units)": 3,
         "Total Revenue (THB)": 30990,
-        "Total Earn (points)": 490,
-        "Total Redeem (points)": 90,
-        "Total Remaining (points)": 310
+        "Total Redeem (points)": 90
       },
       {
         "Name and ID": "Papawarin Makcharoen<br> ID19288309",
@@ -19,9 +17,7 @@
         "Transactions": 3,
         "Quantity (units)": 3,
         "Total Revenue (THB)": 30990,
-        "Total Earn (points)": 490,
-        "Total Redeem (points)": 90,
-        "Total Remaining (points)": 310
+        "Total Redeem (points)": 90
       },
       {
         "Name and ID": "Papawarin Makcharoen<br> ID19288309",
@@ -29,9 +25,7 @@
         "Transactions": 3,
         "Quantity (units)": 3,
         "Total Revenue (THB)": 30990,
-        "Total Earn (points)": 490,
-        "Total Redeem (points)": 90,
-        "Total Remaining (points)": 310
+        "Total Redeem (points)": 90
       },
       {
         "Name and ID": "Papawarin Makcharoen<br> ID19288309",
@@ -39,9 +33,7 @@
         "Transactions": 3,
         "Quantity (units)": 3,
         "Total Revenue (THB)": 30990,
-        "Total Earn (points)": 490,
-        "Total Redeem (points)": 90,
-        "Total Remaining (points)": 310
+        "Total Redeem (points)": 90
       },
       {
         "Name and ID": "Papawarin Makcharoen<br> ID19288309",
@@ -49,9 +41,7 @@
         "Transactions": 3,
         "Quantity (units)": 3,
         "Total Revenue (THB)": 30990,
-        "Total Earn (points)": 490,
-        "Total Redeem (points)": 90,
-        "Total Remaining (points)": 310
+        "Total Redeem (points)": 90
       },
       {
         "Name and ID": "Papawarin Makcharoen<br> ID19288309",
@@ -59,9 +49,7 @@
         "Transactions": 3,
         "Quantity (units)": 3,
         "Total Revenue (THB)": 30990,
-        "Total Earn (points)": 490,
-        "Total Redeem (points)": 90,
-        "Total Remaining (points)": 310
+        "Total Redeem (points)": 90
       }
     ],
     "summarytier": [
@@ -71,15 +59,13 @@
         "TotalTransactions": 200,
         "TotalQuantity (units)": 200,
         "Total Revenue (THB)": 95000,
-        "Total Earn (points)": 15000,
-        "Total Redeem (points)": 500,
-        "Total Remaining (points)": 10000
+        "Total Redeem (points)": 500
       }
     ],
     "summary": {
-      "Total Earn (points)": 15000,
+      "Total Redeem (points)": 15000,
       "Total Member": 35,
-      "Earn(points) from Tiers": {
+      "Redeem(points) from Tiers": {
         "standard": 500,
         "bronze": 500,
         "silver": 500,

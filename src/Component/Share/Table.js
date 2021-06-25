@@ -8,7 +8,7 @@ import {
   TableRow,
   Paper,
 } from "@material-ui/core";
-import Box from "@material-ui/core/Box";
+import Box from '@material-ui/core/Box';
 import TierIcon from "./TierIcon";
 
 import { withStyles, makeStyles } from "@material-ui/core/styles";
@@ -16,12 +16,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     marginTop: theme.spacing(3),
-    overflowX: "auto",
-    color: "#828282",
+    overflowX: "hidden",
+    
   },
   container: {
     maxHeight: window.innerHeight - 350,
     color: "#828282",
+    
   },
   footer: {
     display: "flex",
@@ -33,12 +34,16 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     backgroundColor: "white",
     zIndex: 999,
-    fontFamily: "sans-serif",
     fontWeight: 600,
+    
   },
   ColorText: {
     color: "#828282",
+    
   },
+  TextTableBody:{
+textAlign:"left"
+  }
 }));
 const StyledTableRow = withStyles((i) => ({
   root: {
@@ -55,11 +60,11 @@ export default function AccessibleTable(props) {
     <Paper className={classes.root}>
       <TableContainer className={classes.container} component={Paper}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
+          <TableHead >
+            <TableRow >
               {Object.entries(props.data.list[0]).map(([key, _], index) => {
                 return (
-                  <TableCell
+                  <TableCell className={classes.ColorText}
                     ref={(cell) => {
                       if (cell !== null && footer.length <= index)
                         setFooter((headers) => [...headers, cell.offsetWidth]);
@@ -74,19 +79,20 @@ export default function AccessibleTable(props) {
             </TableRow>
           </TableHead>
 
-          <TableBody>
+          <TableBody >
             {props.data.list.map((row, index) => (
               <StyledTableRow key={index}>
                 {Object.entries(row).map(([key, val], index2) => (
                   <React.Fragment key={index2}>
                     {key === "Tier" ? (
-                      <TableCell>
+                      <TableCell >
                         <TierIcon level={val} />
                       </TableCell>
                     ) : (
                       <TableCell
                         dangerouslySetInnerHTML={{ __html: val }}
                         align="left"
+                        className={classes.ColorText}
                       />
                     )}
                   </React.Fragment>
@@ -95,20 +101,23 @@ export default function AccessibleTable(props) {
             ))}
           </TableBody>
         </Table>
+        <Box className={classes.footer}>
+          {Object.entries(props.data.summarytier[0]).map(
+            ([key, val], index) => (
+              <Box
+                key={index}
+                style={{
+                  width: footer[index] ? footer[index] - 32 : 100,
+                  padding: 16,
+                  fontFamily:"sans-serif"
+                }}
+              >
+                {val}
+              </Box>
+            )
+          )}
+        </Box>
       </TableContainer>
-      <Box className={classes.footer}>
-        {Object.entries(props.data.summarytier[0]).map(([key, val], index) => (
-          <Box
-            key={index}
-            style={{
-              width: footer[index] ? footer[index] - 32 : 100,
-              padding: 16,
-            }}
-          >
-            {val}
-          </Box>
-        ))}
-      </Box>
     </Paper>
   );
 }

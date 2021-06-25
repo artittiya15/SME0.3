@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardOfEarnPoints from "./Components/CardOfEarnPoints";
 import MockDataEarnPoints from "../../MockData/TotalPoints/MockDataEarnPoints.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -94,7 +94,7 @@ export default function EarnPoint() {
         {earnPoint && <CardOfEarnPoints type="single" value={earnPoint.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {earnPoint && <TableRevenue data={earnPoint} />}
+        {earnPoint && <Table data={earnPoint} />}
       </Grid>
     </Grid>
   ));

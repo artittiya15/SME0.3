@@ -1,0 +1,78 @@
+{
+    "code": 0,
+    "msg": "",
+    "data": {
+      "list": [
+        {
+          "Name and ID": "Papawarin Makcharoen<br> ID19288309",
+          "Tier": "silver",
+          "Transactions": 3,
+          "Quantity (units)": 3,
+          "Total Revenue (THB)": 30990,
+          "Total Remaining (points)": 90
+        },
+        {
+          "Name and ID": "Papawarin Makcharoen<br> ID19288309",
+          "Tier": "silver",
+          "Transactions": 3,
+          "Quantity (units)": 3,
+          "Total Revenue (THB)": 30990,
+          "Total Remaining (points)": 90
+        },
+        {
+          "Name and ID": "Papawarin Makcharoen<br> ID19288309",
+          "Tier": "bronze",
+          "Transactions": 3,
+          "Quantity (units)": 3,
+          "Total Revenue (THB)": 30990,
+          "Total Remaining (points)": 90
+        },
+        {
+          "Name and ID": "Papawarin Makcharoen<br> ID19288309",
+          "Tier": "gold",
+          "Transactions": 3,
+          "Quantity (units)": 3,
+          "Total Revenue (THB)": 30990,
+          "Total Remaining (points)": 90
+        },
+        {
+          "Name and ID": "Papawarin Makcharoen<br> ID19288309",
+          "Tier": "platinum",
+          "Transactions": 3,
+          "Quantity (units)": 3,
+          "Total Revenue (THB)": 30990,
+          "Total Remaining (points)": 90
+        },
+        {
+          "Name and ID": "Papawarin Makcharoen<br> ID19288309",
+          "Tier": "bronze",
+          "Transactions": 3,
+          "Quantity (units)": 3,
+          "Total Revenue (THB)": 30990,
+          "Total Remaining (points)": 90
+        }
+      ],
+      "summarytier": [
+        {
+          "Name and ID": "Total",
+          "TotalTier": "",
+          "TotalTransactions": 200,
+          "TotalQuantity (units)": 200,
+          "Total Revenue (THB)": 95000,
+          "Total Remaining (points)": 500
+        }
+      ],
+      "summary": {
+        "Total Remaining (points)": 15000,
+        "Total Member": 35,
+        "Remaining(points) from Tiers": {
+          "standard": 500,
+          "bronze": 500,
+          "silver": 500,
+          "gold": 500,
+          "platinum": 500
+        }
+      }
+    }
+  }
+  

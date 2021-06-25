@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataCategory from "../../MockData/ProductAndCategory/MockDataCategory.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import SearchCategories from "./Components/SeachCategories";
 
@@ -93,7 +93,7 @@ export default function Categories(props) {
         {categories && <CardTotal type="single" value={categories.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {categories && <TableRevenue data={categories} />}
+        {categories && <Table data={categories} />}
       </Grid>
     </Grid>
   ));

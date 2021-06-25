@@ -89,7 +89,7 @@ export default function SearchCategories(props) {
     <>
       <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
         <Button style={{ border: "none" }}>
-          {selectedCategories && selectedCategories.CategoriesName}
+          {selectedCategories && selectedCategories.CategoryName}
         </Button>
         <Button
           style={{ border: "none" }}

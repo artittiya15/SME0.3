@@ -9,7 +9,7 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from '@material-ui/core/InputLabel';
+import InputLabel from "@material-ui/core/InputLabel";
 
 const useStyles = makeStyles((theme) => ({
   ButtonGroup: {
@@ -21,18 +21,14 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
   },
 }));
-const options = [
-  "All",
-  "Shot By item",
-  "Shot By Revenue",
-];
+const options = ["All", "Shot By item", "Shot By Revenue"];
 
 export default function SplitButton() {
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState();
 
   const handleClick = () => {
     console.info(`You clicked ${options[selectedIndex]}`);
@@ -63,15 +59,11 @@ export default function SplitButton() {
         className={classes.ButtonGroup}
       >
         <Button style={{ border: "none" }} onClick={handleClick}>
-          {options[selectedIndex]}
+          {selectedIndex !== undefined ? options[selectedIndex] : "Short By"}
         </Button>
         <Button
           style={{ border: "none" }}
           size="small"
-          aria-controls={open ? "split-button-menu" : undefined}
-          aria-expanded={open ? "true" : undefined}
-          aria-label="select merge strategy"
-          aria-haspopup="menu"
           onClick={handleToggle}
         >
           <ArrowDropDownIcon />
@@ -84,35 +76,22 @@ export default function SplitButton() {
         transition
         disablePortal
       >
-        {({ TransitionProps, placement }) => (
-          <Grow
-            {...TransitionProps}
-            style={{
-              transformOrigin:
-                placement === "bottom" ? "center top" : "center bottom",
-            }}
-          >
-            <Paper>
-              <ClickAwayListener onClickAway={handleClose}>
-                <MenuList id="split-button-menu">
-                <InputLabel htmlFor="age-native-helper">Shot By</InputLabel>
-                  {options.map((option, index) => (
-                    
-                    <MenuItem
-
-                      key={option}
-                      disabled={index === 3}
-                      selected={index === selectedIndex}
-                      onClick={(event) => handleMenuItemClick(event, index)}
-                    >
-                      {option}
-                    </MenuItem>
-                  ))}
-                </MenuList>
-              </ClickAwayListener>
-            </Paper>
-          </Grow>
-        )}
+        <Paper>
+          <ClickAwayListener onClickAway={handleClose}>
+            <MenuList id="split-button-menu">
+              {options.map((option, index) => (
+                <MenuItem
+                  key={option}
+                  disabled={index === 3}
+                  selected={index === selectedIndex}
+                  onClick={(event) => handleMenuItemClick(event, index)}
+                >
+                  {option}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </ClickAwayListener>
+        </Paper>
       </Popper>
     </>
   );

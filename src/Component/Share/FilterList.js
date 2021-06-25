@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     background: "#FA9917",
     marginRight: theme.spacing(2),
+
   },
   ButtonText: {
     border: "none",
@@ -167,6 +168,7 @@ export default function FilterList({ filterData }) {
           textTransform: "none",
           color: "#FFFFFF",
           background: "#FA9917",
+            marginRight: "20px"
         }}
       >
         <FilterListIcon className={classes.FilterListIcon}></FilterListIcon>

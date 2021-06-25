@@ -1,0 +1,150 @@
+{
+    "code": 0,
+    "msg": "",
+    "data": {
+      "list": [
+        {
+          "Tier": "silver",
+          "Member": 50,
+          "LTV(THB)": 1700000,
+          "Transactions": 3,
+          "Total Revenue (THB)": 30990,
+          "Big Spender": 490,
+          "Frequency ": 90,
+          "Frequent Category": 310,
+          "Expensive Category ": "Bag",
+          "Frequent Product": "Chanel Wallet",
+          "Expensive Product ": "Chanel Classic"
+        },
+        {
+          "Tier": "silver",
+          "Member": 50,
+          "LTV(THB)": 1700000,
+          "Transactions": 3,
+          "Total Revenue (THB)": 30990,
+          "Big Spender": 490,
+          "Frequency ": 90,
+          "Frequent Category": 310,
+          "Expensive Category ": "Bag",
+          "Frequent Product": "Chanel Wallet",
+          "Expensive Product ": "Chanel Classic"
+        },
+  
+        {
+          "Tier": "Bronze",
+          "Member": 50,
+          "LTV(THB)": 1700000,
+          "Transactions": 3,
+          "Total Revenue (THB)": 30990,
+          "Big Spender": 490,
+          "Frequency ": 90,
+          "Frequent Category": 310,
+          "Expensive Category ": "Bag",
+          "Frequent Product": "Chanel Wallet",
+          "Expensive Product ": "Chanel Classic"
+        },
+  
+        {
+          "Tier": "gold",
+          "Member": 50,
+          "LTV(THB)": 1700000,
+          "Transactions": 3,
+          "Total Revenue (THB)": 30990,
+          "Big Spender": 490,
+          "Frequency ": 90,
+          "Frequent Category": 310,
+          "Expensive Category ": "Bag",
+          "Frequent Product": "Chanel Wallet",
+          "Expensive Product ": "Chanel Classic"
+        },
+  
+        {
+          "Tier": "platinum",
+          "Member": 50,
+          "LTV(THB)": 1700000,
+          "Transactions": 3,
+          "Total Revenue (THB)": 30990,
+          "Big Spender": 490,
+          "Frequency ": 90,
+          "Frequent Category": 310,
+          "Expensive Category ": "Bag",
+          "Frequent Product": "Chanel Wallet",
+          "Expensive Product ": "Chanel Classic"
+        },
+        {
+          "Tier": "bronze",
+          "Member": 50,
+          "LTV(THB)": 1700000,
+          "Transactions": 3,
+          "Total Revenue (THB)": 30990,
+          "Big Spender": 490,
+          "Frequency ": 90,
+          "Frequent Category": 310,
+          "Expensive Category ": "Bag",
+          "Frequent Product": "Chanel Wallet",
+          "Expensive Product ": "Chanel Classic"
+        }
+      ],
+      "summarytier": [
+        {
+          "Tier": "Total",
+          "Total Member": 1200,
+          "Total LTV(THB)": 2634000,
+          "Total Transactions": 2634000,
+          "Total Revenue (THB)": 24,
+          "Total Big Spender": 24,
+          "Total Frequency ": 0,
+          "Total Frequent Category": "",
+          "Total Expensive Category ": "",
+          "Total Frequent Product": "",
+          "Total Expensive Product ": ""
+        }
+      ],
+      "summary": {
+        "member": {
+          "totalMember.": 363,
+          "revenue": 400500,
+          "LTV": 2000500,
+          "transaction": 970
+        },
+        "Tier": [
+          {
+            "Tier": "Standard",
+            "Number": 100,
+            "Revenue(THB)": 30000,
+            "LTV(THB)": 450000,
+            "Transaction": 130
+          },
+          {
+            "Tier": "Bronze",
+            "Number": 20,
+            "Revenue(THB)": 30000,
+            "LTV(THB)": 450000,
+            "Transaction": 130
+          },
+          {
+            "Tier": "silver",
+            "Number": 17,
+            "Revenue(THB)": 30000,
+            "LTV(THB)": 450000,
+            "Transaction": 130
+          },
+          {
+            "Tier": "gold",
+            "Number": "35",
+            "Revenue(THB)": 30000,
+            "LTV(THB)": 450000,
+            "Transaction": 130
+          },
+          {
+            "Tier": "platinum",
+            "Number": 17,
+            "Revenue(THB)": 30000,
+            "LTV(THB)": 450000,
+            "Transaction": 130
+          }
+        ]
+      }
+    }
+  }
+  

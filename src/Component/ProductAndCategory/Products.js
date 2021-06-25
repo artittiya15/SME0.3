@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataProduct from "../../MockData/ProductAndCategory/MockDataProduct.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import SearchProduct from "./Components/SearchProduct"
 
@@ -93,7 +93,7 @@ export default function Products(props) {
         {products && <CardTotal type="single" value={products.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {products && <TableRevenue data={products} />}
+        {products && <Table data={products} />}
       </Grid>
     </Grid>
   ));

@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockTopBigSpenders from "../../MockData/Ranking/MockTopBigSpenders.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -94,7 +94,7 @@ export default function TopFrequentMembers() {
         {topFrequentMembers && <CardTotal type="mixed" value={topFrequentMembers.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {topFrequentMembers && <TableRevenue data={topFrequentMembers} />}
+        {topFrequentMembers && <Table data={topFrequentMembers} />}
       </Grid>
     </Grid>
   ));

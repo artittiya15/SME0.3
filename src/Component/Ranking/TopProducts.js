@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "../Share/CardTotal"
 import MockDataRankingTopProduct from "../../MockData/Ranking/MockDataRankingTopProduct .json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import FilterTopProduct from "./FilterListTopProduct/FilterTopProduct";
 
@@ -99,7 +99,7 @@ export default function TopProduct() {
         {RankingTopProduct && <CardTotal type="multiple" value={RankingTopProduct.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {RankingTopProduct && <TableRevenue  data={RankingTopProduct} />}
+        {RankingTopProduct && <Table  data={RankingTopProduct} />}
       </Grid>
     </Grid>
   ));

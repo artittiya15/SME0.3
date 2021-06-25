@@ -5,8 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataReavenueWalkIn from "../../MockData/Revenue/MockDataReavenueWalkIn.json";
-import TableRevenue from "./../Share/TableRevenue";
+import MockDataRevenueWalkIn from "../../MockData/Revenue/MockDataRevenueWalkIn.json";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,11 +38,15 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Month",
+    selected: false,
+  },
+  {
+    filterName: "Year",
     selected: false,
   },
   {
@@ -56,7 +60,7 @@ export default function RevenueWalkIn() {
   const [RevenueWalkIn, setRevenueWalkIn] = useState();
 
   async function fetchRevenueMember() {
-    setRevenueWalkIn(MockDataReavenueWalkIn.data);
+    setRevenueWalkIn(MockDataRevenueWalkIn.data);
   }
 
   useEffect(() => {
@@ -92,7 +96,7 @@ export default function RevenueWalkIn() {
         {RevenueWalkIn && <CardTotal type="single" value={RevenueWalkIn.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueWalkIn && <TableRevenue data={RevenueWalkIn} />}
+        {RevenueWalkIn && <Table data={RevenueWalkIn} />}
       </Grid>
     </Grid>
   ));

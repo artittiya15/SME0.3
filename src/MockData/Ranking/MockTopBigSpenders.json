@@ -84,13 +84,17 @@
     ],
     "summarytier": [
       {
-        "TotalRanking": "Total",
-        "Total์Name": "",
-        "TotalID": "",
+        "Ranking": "total",
+        "์TotalName": "",
+        "TotalID":" ",
         "TotalTier": "",
-        "TotalLTV(THB)": 2634000,
+        "TotalLTV(THB)":2634000,
         "Total Revenue (THB)": 2634000,
-        "Freq. Category": 24
+        "TotalTrans.": 24,
+        "TotalFreq. Category": "",
+        "TotalExpensive Category": "",
+        "TotalFreq. Product": "",
+        "TotalExpensive Product": ""
       }
     ],
     "summary": [

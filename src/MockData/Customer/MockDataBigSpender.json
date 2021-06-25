@@ -8,65 +8,87 @@
         "ID": "091919001",
         "Tier": "platinum",
         "LTV(TBV)": 1700000,
-        "Total Transaction":17000,
-        "Total Point": 7,
-        "Remaining Point": 0
-      },
+        "Total Revenue (THB)": 1700000,
+        "Transactions": 17,
+        "Frequent Category":"Bag",
+        "Expensive Category":"Bag",
+        "Frequent Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"    
+        },
       {
         "์Name": "Pitchanida Boonruksa",
         "ID": "091919001",
         "Tier": "silver",
         "LTV(TBV)": 30000,
-        "Total Transaction": 1,
-        "Total Point": 300,
-        "Remaining Point": 0
+        "Total Revenue (THB)": 1700000,
+        "Transactions": 1,
+        "Frequent Category":"Bag",
+        "Expensive Category":"Bag",
+        "Frequent Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"
       },
       {
         "์Name": "Chutipa Nakurl",
         "ID": "091919001",
         "Tier": "gold",
         "LTV(TBV)": 300000,
-        "Total Transaction": 3,
-        "Total Point": 3000,
-        "Remaining Point": 0
+
+        "Total Revenue (THB)": 1700000,
+        "Transaction": 3,
+        "Frequent Category":"Bag",
+        "Expensive Category":"Bag",
+        "Frequent Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"
       },
       {
         "์Name": "Matuphom Siriwattana",
         "ID": "091919001",
         "Tier": "gold",
         "LTV(TBV)": 300000,
-        "Total Transaction": 5,
-        "Total Point": 3000,
-        "Remaining Point": 0
+        "Total Revenue (THB)": 1700000,
+        "Transaction": 5,
+        "Frequent Category":"Bag",
+        "Expensive Category":"Bag",
+        "Frequent Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"
       },
       {
         "์Name": "Ponchin Kitrungrerng",
         "ID": "091919001",
         "Tier": "silver",
         "LTV(TBV)": 4000,
-        "Total Transaction": 2,
-        "Total Point": 400,
-        "Remaining Point": 0
+        "Total Revenue (THB)": 1700000,
+        "Transaction": 2,
+        "Frequent Category":"Bag",
+        "Expensive Category":"Bag",
+        "Frequent Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"
       },
       {
         "์Name": "Kunyarut Ngammurng",
         "ID": " 091919001",
         "Tier": "gold",
         "LTV(THB)": 300000,
-        "Total Transaction":6,
-        "Total Point": 3000,
-        "Remaining Point": 0
+        "Total Revenue (THB)": 1700000,
+        "Transactions": 6,
+        "Frequent Category":"Bag",
+        "Expensive Category":"Bag",
+        "Frequent Product": "Chanel Wallet",
+        "Expensive Product": "Balenciaga"
       }
     ],
     "summarytier": [
       {
-        "TotalRanking": "Total",
-        "Total์Name": "",
-        "TotalID": "",
+        "์TotalName": "Total",
+        "TotalID": " ",
         "TotalTier": "",
         "TotalLTV(THB)": 2634000,
         "Total Revenue (THB)": 2634000,
-        "Freq. Category": 24
+        "TotalTransactions": 24,
+        "TotalFrequent Category":"",
+        "TotalExpensive Category":"",
+        "TotalFrequent Product": "",
+        "TotalExpensive Product": ""
       }
     ],
     "summary": [
@@ -75,7 +97,7 @@
         "Revenue(THB)": 2000500
       },
       {
-        "Transactions": 230,
+        "Transactionss": 230,
         "LTV(THB)": 12000500
       },
       {

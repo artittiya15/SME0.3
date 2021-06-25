@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import  MockDataMember from "../../MockData/Customer/MockDataMember.json"
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -102,7 +102,7 @@ export default function Member() {
         {member && <CardTotal type="single" value={member.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {member && <TableRevenue data={member} />}
+        {member && <Table data={member} />}
       </Grid>
     </Grid>
   ));

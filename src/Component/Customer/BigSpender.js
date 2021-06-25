@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataBigSpender from "../../MockData/Customer/MockDataBigSpender.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,27 +33,19 @@ const useStyles = makeStyles((theme) => ({
 
 const filter = [
   {
-    filterName: "All Tiers",
+    filterName: "All",
     selected: false,
   },
   {
-    filterName: "Standard",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Bronze",
+    filterName: "Month",
     selected: false,
   },
   {
-    filterName: "Silver",
-    selected: false,
-  },
-  {
-    filterName: "Gold",
-    selected: false,
-  },
-  {
-    filterName: "Platinum",
+    filterName: "Year",
     selected: false,
   },
   {
@@ -103,7 +95,7 @@ export default function BigSpender() {
         {bigSpender && <CardTotal type="mixed" value={bigSpender.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {bigSpender && <TableRevenue data={bigSpender} />}
+        {bigSpender && <Table data={bigSpender} />}
       </Grid>
     </Grid>
   ));

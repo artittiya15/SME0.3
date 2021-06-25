@@ -4,58 +4,58 @@
     "data": {
       "list": [
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
           
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
         },
         {
-          "Product Code": "12 July 2020<br>10.30 PM ",
-          "Product Name": "#19288309330298",
+          "Product Code": "CNWL85123696 ",
+          "Product Name": "Chanel Wallet - 85123696",
           "Total Member": 3,
           "Transactions": 3,
           "Total Quantity (units)": 209930
@@ -63,16 +63,11 @@
       ],
       "summarytier": [
         {
-            "TotalDate and Time": " ",
-            "TotalPayment ID": "",
-            "TotalTransaction(times)": 200,
-            "TotalQuantity (units)": 200,
-            "Total Price (THB)": 405000,
-            "TotalDiscount (THB)": 0,
-            "Total Revenue (THB)": 95000,
-            "TotalCash (THB)": 5000,
-            "TotalTransfer (THB)":40000,
-            "TotalCredit/Debit(THB)":20000
+          "Product Code": "",
+          "Product Name": "",
+          "Total Member": 150,
+          "Transactions": 50,
+          "Total Quantity (units)": 170394
         }
       ],
       "summary": {

@@ -5,8 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardOfEarnPoints from "./Components/CardOfEarnPoints";
-import MockDataEarnPoints from "../../MockData/TotalPoints/MockDataEarnPoints.json";
-import TableRevenue from "./../Share/TableRevenue";
+import MockDataRedeemPoints from "../../MockData/TotalPoints/MockDataRedeemPoints.json";
+import Table from "../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +60,7 @@ export default function RedeemPoints() {
 
   useEffect(() => {
     async function fetchRedeemPoints() {
-      setRedeemPoints(MockDataEarnPoints.data);
+      setRedeemPoints(MockDataRedeemPoints.data);
     }
     fetchRedeemPoints();
   }, []);
@@ -94,7 +94,7 @@ export default function RedeemPoints() {
         {redeemPoints && <CardOfEarnPoints type="single" value={redeemPoints.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {redeemPoints && <TableRevenue data={redeemPoints} />}
+        {redeemPoints && <Table data={redeemPoints} />}
       </Grid>
     </Grid>
   ));

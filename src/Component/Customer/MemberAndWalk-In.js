@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataMemberWalkIn from"../../MockData/Customer/MockDataMemberWalkIn.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -39,11 +39,15 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Month",
+    selected: false,
+  },
+  {
+    filterName: "Year",
     selected: false,
   },
   {
@@ -93,7 +97,7 @@ export default function MemberAndWalkIn() {
         {memberAndWalkIn && <CardTotal   type="single" value={memberAndWalkIn.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {memberAndWalkIn && <TableRevenue data={memberAndWalkIn} />}
+        {memberAndWalkIn && <Table data={memberAndWalkIn} />}
       </Grid>
     </Grid>
   ));

@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataBigSpender from "../../MockData/Customer/MockDataBigSpender.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -32,34 +32,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const filter = [
-    {
-        filterName: "All Tiers",
-        selected: false,
-      },
-      {
-        filterName: "Standard",
-        selected: false,
-      },
-      {
-        filterName: "Bronze",
-        selected: false,
-      },
-      {
-        filterName: "Silver",
-        selected: false,
-      },
-      {
-        filterName: "Gold",
-        selected: false,
-      },
-      {
-        filterName: "Platinum",
-        selected: false,
-      },
-      {
-        filterName: "Custom Date",
-        selected: false,
-      },
+  {
+    filterName: "All",
+    selected: false,
+  },
+  {
+    filterName: "Day",
+    selected: false,
+  },
+  {
+    filterName: "Month",
+    selected: false,
+  },
+  {
+    filterName: "Year",
+    selected: false,
+  },
+  {
+    filterName: "Custom Date",
+    selected: false,
+  },
 
 ];
 
@@ -94,7 +86,7 @@ export default function Frequency() {
         container
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
-        <MemberFilter filterData={filter} />
+        <MemberFilter filterData={filter}  />
         {frequency && (
           <ActionBar handlePrint={handlePrint} dataExportCSV={frequency} />
         )}
@@ -103,7 +95,7 @@ export default function Frequency() {
         {frequency && <CardTotal type="mixed" value={frequency.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {frequency && <TableRevenue data={frequency} />}
+        {frequency && <Table data={frequency} />}
       </Grid>
     </Grid>
   ));

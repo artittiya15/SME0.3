@@ -5,8 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataRevenueMember from "../../MockData/Revenue/RevenueMember.json"
-import TableRevenue from "./../Share/TableRevenue";
+import MockDataVoid from "../../MockData/Revenue/MockDataVoid.json";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,11 +38,15 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Month",
+    selected: false,
+  },
+  {
+    filterName: "Year",
     selected: false,
   },
   {
@@ -56,7 +60,7 @@ export default function Void() {
   const [RevenueMember, setRevenueMember] = useState();
 
   async function fetchRevenueMember() {
-    setRevenueMember(MockDataRevenueMember.data);
+    setRevenueMember(MockDataVoid.data);
   }
 
   useEffect(() => {
@@ -92,7 +96,7 @@ export default function Void() {
         {RevenueMember && <CardTotal  type="single" value={RevenueMember.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueMember && <TableRevenue data={RevenueMember} />}
+        {RevenueMember && <Table data={RevenueMember} />}
       </Grid>
     </Grid>
   ));

@@ -5,8 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "../Share/CardTotal"
-import MockDataRankingTopProduct from "../../MockData/Ranking/MockDataRankingTopProduct .json";
-import TableRevenue from "./../Share/TableRevenue";
+import MockDataTopProductCategories from "../../MockData/Ranking/MockDataTopProductCategories.json";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +60,7 @@ export default function TopProduct() {
   const [RankingTopProduct, setRankingTopProduct] = useState();
 
   async function fetchRankingTopProduct() {
-    setRankingTopProduct(MockDataRankingTopProduct.data);
+    setRankingTopProduct(MockDataTopProductCategories.data);
   }
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function TopProduct() {
         {RankingTopProduct && <CardTotal type="multiple" value={RankingTopProduct.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {RankingTopProduct && <TableRevenue  data={RankingTopProduct} />}
+        {RankingTopProduct && <Table  data={RankingTopProduct} />}
       </Grid>
     </Grid>
   ));

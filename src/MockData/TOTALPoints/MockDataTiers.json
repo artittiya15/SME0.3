@@ -101,15 +101,49 @@
       }
     ],
     "summary": {
-      "Big Spender": 15000,
-      "Total Member": 35,
-      "Redeem(points) from Tiers": {
-        "standard": 500,
-        "bronze": 500,
-        "silver": 500,
-        "gold": 500,
-        "platinum": 500
-      }
+      "Member": {
+        "Total Member.": 363,
+        "Revenue(THB)": 400500,
+        "LTV(THB)": 2000500,
+        "Transaction": 970
+      },
+      "Tier": [
+        {
+          "Tier": "Standard",
+          "Number": 100,
+          "Revenue(THB)": 30000,
+          "LTV(THB)": 450000,
+          "Transaction": 130
+        },
+        {
+          "Tier": "Bronze",
+          "Number": 20,
+          "Revenue(THB)": 30000,
+          "LTV(THB)": 450000,
+          "Transaction": 130
+        },
+        {
+          "Tier": "silver",
+          "Number": 17,
+          "Revenue(THB)": 30000,
+          "LTV(THB)": 450000,
+          "Transaction": 130
+        },
+        {
+          "Tier": "gold",
+          "Number": "35",
+          "Revenue(THB)": 30000,
+          "LTV(THB)": 450000,
+          "Transaction": 130
+        },
+        {
+          "Tier": "platinum",
+          "Number": 17,
+          "Revenue(THB)": 30000,
+          "LTV(THB)": 450000,
+          "Transaction": 130
+        }
+      ]
     }
   }
 }

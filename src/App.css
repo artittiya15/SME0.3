@@ -13,3 +13,31 @@
   }
 }
 
+/* Myriad Pro-100 - latin */
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./Fonts/Myriad\ Pro\ Light.otf') format("opentype"), /* Safari, Android, iOS */
+}
+/* Myriad Pro-regular - latin */
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: normal;
+  font-weight: 400;
+  src:  url('./Fonts/Myriad\ Pro\ Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* Myriad Pro-italic - latin */
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./Fonts/Myriad\ Pro\ Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* Myriad Pro-800 - latin */
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./Fonts/Myriad\ Pro\ Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}

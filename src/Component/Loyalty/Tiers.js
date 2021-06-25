@@ -5,10 +5,9 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import MockDataTiers from "../../MockData/TotalPoints/MockDataTiers.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "../Share/Table";
 import { useReactToPrint } from "react-to-print";
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import CardOfTier from "./Components/CardOfTier"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -54,9 +53,9 @@ const filter = [
   },
 ];
 
-export default function Tiers() {
+export default function Tiers(props) {
   const componentRef = useRef();
-  const [Tiers, setTiers] = useState();
+  const [tiers, setTiers] = useState();
 
   useEffect(() => {
     async function fetchTiers() {
@@ -86,16 +85,15 @@ export default function Tiers() {
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
         <FilterList filterData={filter} />
-        {Tiers && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={Tiers} />
+        {tiers && (
+          <ActionBar handlePrint={handlePrint} dataExportCSV={tiers} />
         )}
       </Grid>
       <Grid item xs={12} container>
-      <Grid xs={3}></Grid>
-      <Card></Card>
+        {tiers && <CardOfTier type="single" value={tiers.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {Tiers && <TableRevenue data={Tiers} />}
+        {tiers && <Table data={tiers} />}
       </Grid>
     </Grid>
   ));

@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "../Share/CardTotal"
 import MockTopPaymentMethods from "../../MockData/Ranking/MockTOPPaymentMethods.json";
-import TableRevenue from "./../Share/TableRevenue";
+import TableRevenue from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({

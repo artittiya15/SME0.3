@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataTransaction from "../../MockData/Revenue/MockDataTransaction.json";
 import { useReactToPrint } from "react-to-print";
-import TableRevenue from "../Share/TableRevenue"
+import Table from "../Share/Table"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -37,11 +37,15 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Month",
+    selected: false,
+  },
+  {
+    filterName: "Year",
     selected: false,
   },
   {
@@ -91,7 +95,7 @@ export default function Transection() {
         {RevenueMember && <CardTotal type="single" value={RevenueMember.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueMember && <TableRevenue data={RevenueMember} />}
+        {RevenueMember && <Table data={RevenueMember} />}
       </Grid>
     </Grid>
   ));

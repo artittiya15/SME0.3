@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataAllRevenue from "../../MockData/Revenue/MockDataAllRevenue.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,11 +38,15 @@ const filter = [
     selected: false,
   },
   {
-    filterName: "Only Member",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Only Walk-In",
+    filterName: "Month",
+    selected: false,
+  },
+  {
+    filterName: "Year",
     selected: false,
   },
   {
@@ -83,7 +87,7 @@ export default function AllRevenue() {
         container
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
-        <FilterList filterData={filter} />
+        <FilterList filterData={filter}  />
         {allRevenue && (
           <ActionBar handlePrint={handlePrint} dataExportCSV={allRevenue} />
         )}
@@ -92,7 +96,7 @@ export default function AllRevenue() {
         {allRevenue && <CardTotal type="single" value={allRevenue.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {allRevenue && <TableRevenue data={allRevenue} />}
+        {allRevenue && <Table data={allRevenue} />}
       </Grid>
     </Grid>
   ));

@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataWalkIn from"../../MockData/Customer/MockDataWalkIn.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,27 +35,19 @@ const useStyles = makeStyles((theme) => ({
 
 const filter = [
   {
-    filterName: "All Tiers",
+    filterName: "All",
     selected: false,
   },
   {
-    filterName: "Standard",
+    filterName: "Day",
     selected: false,
   },
   {
-    filterName: "Bronze",
+    filterName: "Month",
     selected: false,
   },
   {
-    filterName: "Silver",
-    selected: false,
-  },
-  {
-    filterName: "Gold",
-    selected: false,
-  },
-  {
-    filterName: "Platinum",
+    filterName: "Year",
     selected: false,
   },
   {
@@ -106,7 +98,7 @@ export default function WalkIn() {
         {walkIn && <CardTotal   type="single" value={walkIn.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {walkIn && <TableRevenue data={walkIn} />}
+        {walkIn && <Table data={walkIn} />}
       </Grid>
     </Grid>
   ));

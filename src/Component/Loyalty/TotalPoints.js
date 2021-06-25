@@ -6,7 +6,7 @@ import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
 import MockDataTotalPoints from "../../MockData/TotalPoints/MockDataTotalPoints.json";
-import TableRevenue from "./../Share/TableRevenue";
+import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 
 const useStyles = makeStyles((theme) => ({
@@ -94,7 +94,7 @@ export default function TopBigSpender() {
         {topBigSpender && <CardTotal type="single" value={topBigSpender.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {topBigSpender && <TableRevenue data={topBigSpender} />}
+        {topBigSpender && <Table data={topBigSpender} />}
       </Grid>
     </Grid>
   ));
