@@ -3,13 +3,11 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
 import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
 
 const useStyles = makeStyles((theme) => ({
   ButtonGroup: {
@@ -18,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     background: "white",
     marginRight: theme.spacing(2),
-    textTransform: "none",
   },
 }));
 const options = ["All", "Shot By item", "Shot By Revenue"];

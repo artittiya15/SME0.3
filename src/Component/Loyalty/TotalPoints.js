@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataTotalPoints from "../../MockData/TotalPoints/MockDataTotalPoints.json";
+import MockDataTotalPoints from "../../MockData/TOTALPoints/MockDataTotalPoints.json";
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 

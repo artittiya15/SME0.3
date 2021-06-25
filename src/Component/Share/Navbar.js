@@ -7,7 +7,6 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import { Box, Typography } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";

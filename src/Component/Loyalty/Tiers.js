@@ -4,7 +4,7 @@ import FilterList from "./../Share/FilterList";
 import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
-import MockDataTiers from "../../MockData/TotalPoints/MockDataTiers.json";
+import MockDataTiers from "../../MockData/TOTALPoints/MockDataTiers.json";
 import Table from "../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import CardOfTier from "./Components/CardOfTier"
