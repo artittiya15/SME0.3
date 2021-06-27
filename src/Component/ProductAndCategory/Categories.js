@@ -52,7 +52,7 @@ const filter = [
   },
 ];
 
-export default function Categories(props) {
+export default function Categories() {
   const componentRef = useRef();
   const [categories, setCategories] = useState();
 

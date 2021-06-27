@@ -10,7 +10,7 @@ function handleClick(event) {
 
 export default function SimpleBreadcrumbs() {
   return (
-    <Breadcrumbs aria-label="breadcrumb">
+    <Breadcrumbs style={{margin: 10}} aria-label="breadcrumb">
       <Link color="inherit" href="/" onClick={handleClick}>
         Material-UI
       </Link>

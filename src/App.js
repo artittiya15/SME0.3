@@ -30,7 +30,6 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   typography: {
     fontFamily: ["Myriad Pro", "sans-serif"].join(","),
-    
   },
 });
 function App() {

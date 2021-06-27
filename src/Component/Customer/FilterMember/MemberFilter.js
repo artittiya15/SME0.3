@@ -173,6 +173,7 @@ export default function MemberFilter({ filterData }) {
           textTransform: "none",
           color: "#FFFFFF",
           background: "#FA9917",
+          marginRight: "20px"
         }}
       >
         <FilterListIcon className={classes.FilterListIcon}></FilterListIcon>

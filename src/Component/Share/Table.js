@@ -7,8 +7,9 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Typography,
 } from "@material-ui/core";
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box";
 import TierIcon from "./TierIcon";
 
 import { withStyles, makeStyles } from "@material-ui/core/styles";
@@ -17,12 +18,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: theme.spacing(3),
     overflowX: "hidden",
-    
   },
   container: {
     maxHeight: window.innerHeight - 350,
     color: "#828282",
-    
   },
   footer: {
     display: "flex",
@@ -35,15 +34,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     zIndex: 999,
     fontWeight: 600,
-    
   },
   ColorText: {
     color: "#828282",
-    
   },
-  TextTableBody:{
-textAlign:"left"
-  }
+  TextTableBody: {
+    textAlign: "left",
+  },
 }));
 const StyledTableRow = withStyles((i) => ({
   root: {
@@ -60,32 +57,33 @@ export default function AccessibleTable(props) {
     <Paper className={classes.root}>
       <TableContainer className={classes.container} component={Paper}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead >
-            <TableRow >
+          <TableHead>
+            <TableRow>
               {Object.entries(props.data.list[0]).map(([key, _], index) => {
                 return (
-                  <TableCell className={classes.ColorText}
-                    ref={(cell) => {
+                  <TableCell
+                    className={classes.ColorText}
+                    ref={(cell) => {//รับค่าความกว้างของ headerTable to footer
                       if (cell !== null && footer.length <= index)
                         setFooter((headers) => [...headers, cell.offsetWidth]);
                     }}
                     key={index}
                     align="left"
                   >
-                    {key}
+                    <Typography noWrap>{key}</Typography>
                   </TableCell>
                 );
               })}
             </TableRow>
           </TableHead>
 
-          <TableBody >
+          <TableBody>
             {props.data.list.map((row, index) => (
               <StyledTableRow key={index}>
                 {Object.entries(row).map(([key, val], index2) => (
                   <React.Fragment key={index2}>
                     {key === "Tier" ? (
-                      <TableCell >
+                      <TableCell>
                         <TierIcon level={val} />
                       </TableCell>
                     ) : (
@@ -93,7 +91,7 @@ export default function AccessibleTable(props) {
                         dangerouslySetInnerHTML={{ __html: val }}
                         align="left"
                         className={classes.ColorText}
-                      />
+                      />// แสดงข้อความที่เป็น html
                     )}
                   </React.Fragment>
                 ))}
@@ -103,13 +101,13 @@ export default function AccessibleTable(props) {
         </Table>
         <Box className={classes.footer}>
           {Object.entries(props.data.summarytier[0]).map(
-            ([key, val], index) => (
+            ([_, val], index) => (
               <Box
                 key={index}
                 style={{
                   width: footer[index] ? footer[index] - 32 : 100,
                   padding: 16,
-                  fontFamily:"sans-serif"
+                  fontFamily: "sans-serif",
                 }}
               >
                 {val}

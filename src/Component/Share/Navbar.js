@@ -192,7 +192,7 @@ export default function MenuAppBar() {
         </List>
         <Typography>ProductAndCategory</Typography>
         <List>
-          {["Categories ", "Products"].map((text, index) => (
+          {["Categories", "Products"].map((text, index) => (
             <ListItem button key={index}>
               <Link to={"/" + text}>{text}</Link>
             </ListItem>
@@ -202,10 +202,10 @@ export default function MenuAppBar() {
         <List>
           {[
             "TotalPoints",
-            "EarnPoints ",
+            "EarnPoints",
             "RedeemPoints",
-            "RemainingPoints ",
-            "Tiers ",
+            "RemainingPoints",
+            "Tiers",
             
           ].map((text, index) => (
             <ListItem button key={index}>
