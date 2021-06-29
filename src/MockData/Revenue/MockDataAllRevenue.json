@@ -5,7 +5,7 @@
       "list": [
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "Papawarin Makcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -19,7 +19,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "Papawarin Makcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -33,7 +33,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "Papawarin Makcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -47,7 +47,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "PapawarinMakcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -61,7 +61,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "PapawarinMakcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -75,7 +75,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "PapawarinMakcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -89,7 +89,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "PapawarinMakcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -103,7 +103,7 @@
         },
         {
           "Date and Time": "12 July 2020<br>10.30 PM ",
-          "Name and ID": "#19288309330298",
+          "Name and ID": "PapawarinMakcharoen<br>#19288309330298",
           "LTV (THB)":235000,
           "Transaction": 3,
           "Quantity (units)": 3,
@@ -118,18 +118,18 @@
       ],
       "summarytier": [
         {
-            "TotalDate and Time": " Total",
-            "TotalName and ID": "",
+            "Date and Time":"Total",
+            "Name and ID": "",
             "LTV (THB)":305000,
-            "TotalTransaction": 200,
-            "TotalQuantity (units)": 200,
+            "Transaction":200,
+            "Quantity (units)":200,
             "Total Price (THB)": 405000,
-            "TotalDiscount (THB)": 0,
-            "Total Revenue (THB)": 95000,
-            "TotalCash (THB)": 5000,
-            "TotalTransfer (THB)":40000,
-            "TotalCredit/Debit(THB)":20000,
-            "TotalOutstanding (THB)":50000
+            "Discount (THB)":0,
+            "Total Revenue (THB)":95000,
+            "Cash (THB)":5000,
+            "Transfer (THB)":40000,
+            "Credit/Debit(THB)":20000,
+            "Outstanding (THB)":50000
         }
       ],
       "summary": {

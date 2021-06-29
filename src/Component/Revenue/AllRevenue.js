@@ -13,7 +13,6 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-   
   },
 
   menuButton: {
@@ -22,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  
+
   RevenueByMember: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
-    fontFamily:"MyriadPro",
-    lineHeight:"35px"
+    fontFamily: "MyriadPro",
+    lineHeight: "35px",
   },
 }));
 
@@ -57,14 +56,21 @@ const filter = [
 ];
 
 export default function AllRevenue() {
+  const pageName = "Revenue";
   const componentRef = useRef();
   const [allRevenue, setAllRevenue] = useState();
 
-  async function fetchAllRevenue() {
-    setAllRevenue(MockDataAllRevenue.data);
-  }
-
   useEffect(() => {
+    async function fetchAllRevenue() {
+      const mappingData = { ...MockDataAllRevenue.data };
+      const newData = mappingData.list.map((data) => ({
+        ...data,
+        Name: data["Name and ID"].split("<br>")[0],
+        ID: data["Name and ID"].split("<br>")[1],
+      }));
+      mappingData.list = newData;
+      setAllRevenue(mappingData);
+    }
     fetchAllRevenue();
   }, []);
 
@@ -79,7 +85,12 @@ export default function AllRevenue() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}} >Revenue</Typography>
+        <Typography
+          variant="h5"
+          style={{ fontWeight: "bold", marginLeft: "10px" }}
+        >
+          {pageName}
+        </Typography>
       </Grid>
       <Grid
         item
@@ -88,9 +99,13 @@ export default function AllRevenue() {
         container
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
-        <FilterList filterData={filter}  />
+        <FilterList filterData={filter} />
         {allRevenue && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={allRevenue} />
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={allRevenue}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>

@@ -67,6 +67,8 @@ export default function SearchCategories(props) {
   const classes = useStyles();
   const [Search, setSearch] = useState();
   const [selectedCategories, setSelectedCategories] = React.useState();
+ 
+  
 
   useEffect(() => {
     async function fetchSearchCategories() {
@@ -84,12 +86,13 @@ export default function SearchCategories(props) {
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
+  const [confirm,setConfirm]= React.useState(selectedCategories)
 
   return (
     <>
       <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
         <Button style={{ border: "none" }}>
-          {selectedCategories && selectedCategories.CategoryName}
+          {confirm && confirm.CategoryName}
         </Button>
         <Button
           style={{ border: "none" }}
@@ -196,7 +199,10 @@ export default function SearchCategories(props) {
             Cancel
           </Button>
           <Button
-            onClick={handleCloseDialog}
+            onClick={() => {
+              setConfirm(selectedCategories);
+              setOpenDialog(false);
+            }} //
             style={{
               borderRadius: 0,
               backgroundColor: "#FA9917",
