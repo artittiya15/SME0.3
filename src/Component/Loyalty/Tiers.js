@@ -56,6 +56,7 @@ const filter = [
 export default function Tiers(props) {
   const componentRef = useRef();
   const [tiers, setTiers] = useState();
+  const pageName = "Tiers";
 
   useEffect(() => {
     async function fetchTiers() {
@@ -86,7 +87,7 @@ export default function Tiers(props) {
       >
         <FilterList filterData={filter} />
         {tiers && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={tiers} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={tiers} pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container>

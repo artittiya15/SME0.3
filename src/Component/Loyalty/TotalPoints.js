@@ -55,15 +55,16 @@ const filter = [
   },
 ];
 
-export default function TopBigSpender() {
+export default function TotalPoints() {
   const componentRef = useRef();
-  const [topBigSpender, setTopBigSpender] = useState();
+  const [totalPoints, setTotalPoints] = useState();
+  const pageName = "TotalPoints";
 
   useEffect(() => {
-    async function fetchTopBigSpender() {
-      setTopBigSpender(MockDataTotalPoints.data);
+    async function fetchTotalPoints() {
+      setTotalPoints(MockDataTotalPoints.data);
     }
-    fetchTopBigSpender();
+    fetchTotalPoints();
   }, []);
 
   const handlePrint = useReactToPrint({
@@ -87,15 +88,15 @@ export default function TopBigSpender() {
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
         <FilterList filterData={filter} />
-        {topBigSpender && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={topBigSpender} />
+        {totalPoints && (
+          <ActionBar handlePrint={handlePrint} dataExportExcel={totalPoints} pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container>
-        {topBigSpender && <CardTotal type="single" value={topBigSpender.summary} />}
+        {totalPoints && <CardTotal type="single" value={totalPoints.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {topBigSpender && <Table data={topBigSpender} />}
+        {totalPoints && <Table data={totalPoints} />}
       </Grid>
     </Grid>
   ));

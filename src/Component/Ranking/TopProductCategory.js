@@ -59,6 +59,7 @@ const filter = [
 export default function TopProduct() {
   const componentRef = useRef();
   const [RankingTopProduct, setRankingTopProduct] = useState();
+  const pageName = "TopProduct";
 
   async function fetchRankingTopProduct() {
     setRankingTopProduct(MockDataTopProductCategories.data);
@@ -90,7 +91,7 @@ export default function TopProduct() {
       >
         <FilterList filterData={filter} />
         {RankingTopProduct && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={RankingTopProduct} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={RankingTopProduct}  pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container  className={classes.textCard}>

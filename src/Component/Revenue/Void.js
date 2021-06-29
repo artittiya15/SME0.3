@@ -59,6 +59,8 @@ const filter = [
 export default function Void() {
   const componentRef = useRef();
   const [RevenueMember, setRevenueMember] = useState();
+  const pageName = "Void";
+
 
   async function fetchRevenueMember() {
     setRevenueMember(MockDataVoid.data);
@@ -90,7 +92,7 @@ export default function Void() {
       >
         <FilterList filterData={filter} />
         {RevenueMember && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={RevenueMember} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={RevenueMember} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

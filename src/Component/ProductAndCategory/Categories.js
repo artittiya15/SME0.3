@@ -55,6 +55,7 @@ const filter = [
 export default function Categories() {
   const componentRef = useRef();
   const [categories, setCategories] = useState();
+  const pageName = "Categories";
 
   async function fetchCategories() {
     setCategories(MockDataCategory.data);
@@ -87,7 +88,7 @@ export default function Categories() {
          <SearchCategories /> 
         <FilterList filterData={filter} />
         {categories && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={categories} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={categories} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

@@ -59,6 +59,7 @@ const filter = [
 export default function RevenueWalkIn() {
   const componentRef = useRef();
   const [RevenueWalkIn, setRevenueWalkIn] = useState();
+  const pageName = "RevenueWalkIn";
 
   async function fetchRevenueMember() {
     setRevenueWalkIn(MockDataRevenueWalkIn.data);
@@ -90,7 +91,7 @@ export default function RevenueWalkIn() {
       >
         <FilterList filterData={filter} />
         {RevenueWalkIn && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={RevenueWalkIn} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={RevenueWalkIn} pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container>

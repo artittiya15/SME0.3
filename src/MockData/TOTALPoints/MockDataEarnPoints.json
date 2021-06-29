@@ -68,8 +68,8 @@
       {
         "Name and ID": "Total",
         "TotalTier": "",
-        "TotalTransactions": 200,
-        "TotalQuantity (units)": 200,
+        "Transactions": 200,
+        "Quantity (units)": 200,
         "Total Revenue (THB)": 95000,
         "Total Earn (points)": 15000,
         "Total Redeem (points)": 500,

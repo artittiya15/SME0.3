@@ -58,6 +58,7 @@ const filter = [
 export default function RemainingPoints() {
   const componentRef = useRef();
   const [remainingPoints, setRemainingPoints] = useState();
+  const pageName = "RemainingPoints";
 
   useEffect(() => {
     async function fetchRemainingPoints() {
@@ -88,7 +89,7 @@ export default function RemainingPoints() {
       >
         <FilterList filterData={filter} />
         {remainingPoints && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={remainingPoints} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={remainingPoints} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

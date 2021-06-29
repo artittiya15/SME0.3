@@ -118,18 +118,18 @@
     ],
     "summarytier": [
       {
-          "Date and Time": "Total ",
-          "Name and ID": "",
-          "LTV (THB)":305000,
-          "Transaction": 200,
-          "Quantity (units)": 200,
-          " Price (THB)": 405000,
-          "Discount (THB)": 0,
-          " Revenue (THB)": 95000,
-          "Cash (THB)": 5000,
-          "Transfer (THB)":40000,
-          "Credit/Debit(THB)":20000,
-          "Outstanding (THB)":50000
+        "Date and Time": "Total",
+        "Name and ID": "",
+        "LTV (THB)":305000,
+        "Transaction": 200,
+        "Quantity (units)": 200,
+        "Total Price (THB)": 405000,
+        "Discount (THB)": 5000,
+        "Total Revenue (THB)": 95000,
+        "Cash (THB)": 5000,
+        "Transfer (THB)":40000,
+        "Credit/Debit(THB)":20000,
+        "Outstanding (THB)":50000
       }
     ],
     "summary": {

@@ -62,14 +62,7 @@ export default function AllRevenue() {
 
   useEffect(() => {
     async function fetchAllRevenue() {
-      const mappingData = { ...MockDataAllRevenue.data };
-      const newData = mappingData.list.map((data) => ({
-        ...data,
-        Name: data["Name and ID"].split("<br>")[0],
-        ID: data["Name and ID"].split("<br>")[1],
-      }));
-      mappingData.list = newData;
-      setAllRevenue(mappingData);
+      setAllRevenue(MockDataAllRevenue.data);
     }
     fetchAllRevenue();
   }, []);

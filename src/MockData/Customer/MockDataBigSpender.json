@@ -4,10 +4,10 @@
   "data": {
     "list": [
       {
-        "์Name": "Bussaracum Wanasiri",
+        "Name": "Bussaracum Wanasiri",
         "ID": "091919001",
         "Tier": "platinum",
-        "LTV(TBV)": 1700000,
+        "LTV(THB)": 1700000,
         "Total Revenue (THB)": 1700000,
         "Transactions": 17,
         "Frequent Category":"Bag",
@@ -16,10 +16,10 @@
         "Expensive Product": "Balenciaga"    
         },
       {
-        "์Name": "Pitchanida Boonruksa",
+        "Name": "Pitchanida Boonruksa",
         "ID": "091919001",
         "Tier": "silver",
-        "LTV(TBV)": 30000,
+        "LTV(THB)": 30000,
         "Total Revenue (THB)": 1700000,
         "Transactions": 1,
         "Frequent Category":"Bag",
@@ -28,10 +28,10 @@
         "Expensive Product": "Balenciaga"
       },
       {
-        "์Name": "Chutipa Nakurl",
+        "Name": "Chutipa Nakurl",
         "ID": "091919001",
         "Tier": "gold",
-        "LTV(TBV)": 300000,
+        "LTV(THB)": 300000,
 
         "Total Revenue (THB)": 1700000,
         "Transaction": 3,
@@ -41,10 +41,10 @@
         "Expensive Product": "Balenciaga"
       },
       {
-        "์Name": "Matuphom Siriwattana",
+        "Name": "Matuphom Siriwattana",
         "ID": "091919001",
         "Tier": "gold",
-        "LTV(TBV)": 300000,
+        "LTV(THB)": 300000,
         "Total Revenue (THB)": 1700000,
         "Transaction": 5,
         "Frequent Category":"Bag",
@@ -53,10 +53,10 @@
         "Expensive Product": "Balenciaga"
       },
       {
-        "์Name": "Ponchin Kitrungrerng",
+        "Name": "Ponchin Kitrungrerng",
         "ID": "091919001",
         "Tier": "silver",
-        "LTV(TBV)": 4000,
+        "LTV(THB)": 4000,
         "Total Revenue (THB)": 1700000,
         "Transaction": 2,
         "Frequent Category":"Bag",
@@ -65,7 +65,7 @@
         "Expensive Product": "Balenciaga"
       },
       {
-        "์Name": "Kunyarut Ngammurng",
+        "Name": "Kunyarut Ngammurng",
         "ID": " 091919001",
         "Tier": "gold",
         "LTV(THB)": 300000,
@@ -79,16 +79,16 @@
     ],
     "summarytier": [
       {
-        "์TotalName": "Total",
-        "TotalID": " ",
-        "TotalTier": "",
-        "TotalLTV(THB)": 2634000,
+        "Name": "Total",
+        "ID": "",
+        "Tier": "",
+        "LTV(THB)": 2634000,
         "Total Revenue (THB)": 2634000,
-        "TotalTransactions": 24,
-        "TotalFrequent Category":"",
-        "TotalExpensive Category":"",
-        "TotalFrequent Product": "",
-        "TotalExpensive Product": ""
+        "Transactions": 24,
+        "Frequent Category":"",
+        "Expensive Category":"",
+        "Frequent Product": "",
+        "Expensive Product": ""
       }
     ],
     "summary": [

@@ -61,6 +61,7 @@ const filter = [
 export default function WalkIn() {
   const componentRef = useRef();
   const [walkIn, setWalkIn] = useState();
+  const pageName = "WalkIn";
 
   async function fetchWalkIn() {
     setWalkIn(MockDataWalkIn.data);
@@ -92,7 +93,7 @@ export default function WalkIn() {
       >
         <FilterList filterData={filter} />
         {walkIn && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={walkIn} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={walkIn}  pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12}  container>

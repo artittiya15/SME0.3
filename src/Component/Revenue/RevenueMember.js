@@ -59,6 +59,7 @@ const filter = [
 export default function RevenueMember() {
   const componentRef = useRef();
   const [RevenueMember, setRevenueMember] = useState();
+  const pageName = "RevenueMember";
 
   async function fetchRevenueMember() {
     setRevenueMember(MockDataRevenueMember.data);
@@ -90,7 +91,7 @@ export default function RevenueMember() {
       >
         <FilterList filterData={filter} />
         {RevenueMember && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={RevenueMember} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={RevenueMember}  pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container>

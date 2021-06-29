@@ -54,6 +54,7 @@ const filter = [
 export default function TopBigSpender() {
   const componentRef = useRef();
   const [topBigSpender, setTopBigSpender] = useState();
+  const pageName = "TopBigSpender";
 
   useEffect(() => {
     async function fetchTopBigSpender() {
@@ -84,7 +85,7 @@ export default function TopBigSpender() {
       >
         <FilterList filterData={filter} />
         {topBigSpender && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={topBigSpender} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={topBigSpender}  pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container>

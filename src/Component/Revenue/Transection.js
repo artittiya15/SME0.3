@@ -57,14 +57,15 @@ const filter = [
 
 export default function Transection() {
   const componentRef = useRef();
-  const [RevenueMember, setRevenueMember] = useState();
+  const [transection, setTransection] = useState();
+  const pageName = "Transection";
 
-  async function fetchRevenueMember() {
-    setRevenueMember(MockDataTransaction.data);
+  async function fetchTransection() {
+    setTransection(MockDataTransaction.data);
   }
 
   useEffect(() => {
-    fetchRevenueMember();
+    fetchTransection();
   }, []);
 
   const handlePrint = useReactToPrint({
@@ -88,15 +89,15 @@ export default function Transection() {
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
         <FilterList filterData={filter} />
-        {RevenueMember && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={RevenueMember} />
+        {transection && (
+          <ActionBar handlePrint={handlePrint} dataExportExcel={transection} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueMember && <CardTotal type="single" value={RevenueMember.summary} />}
+        {transection && <CardTotal type="single" value={transection.summary} />}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueMember && <Table data={RevenueMember} />}
+        {transection && <Table data={transection} />}
       </Grid>
     </Grid>
   ));

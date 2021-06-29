@@ -59,7 +59,7 @@ const filter = [
 export default function Frequency() {
   const componentRef = useRef();
   const [frequency, setFrequency] = useState();
-
+  const pageName = "Frequency";
   useEffect(() => {
     async function fetchFrequency() {
       setFrequency(MockDataBigSpender.data);
@@ -89,7 +89,7 @@ export default function Frequency() {
       >
         <MemberFilter filterData={filter}  />
         {frequency && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={frequency} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={frequency} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

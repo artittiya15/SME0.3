@@ -65,7 +65,7 @@ const filter = [
 export default function Member() {
   const componentRef = useRef();
   const [member, setMember] = useState();
-
+  const pageName = "Member";
   useEffect(() => {
     async function fetchMember() {
       setMember(MockDataMember.data);
@@ -96,7 +96,7 @@ export default function Member() {
       >
         <MemberFilter filterData={filter} />
         {member && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={member} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={member} pageName={pageName}  />
         )}
       </Grid>
       <Grid item xs={12} container>

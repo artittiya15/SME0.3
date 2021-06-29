@@ -110,17 +110,17 @@
     ],
     "summarytier": [
       {
-        "TotalDate and Time": "Total ",
-        "TotalName and Payment ID": "",
-        "TotalTransaction(times)": 200,
-        "TotalQuantity (units)": 200,
+        "Date and Time": "Total",
+        "Name and Payment ID": "",
+        "Transaction(times)": 200,
+        "Quantity (units)": 200,
         "Total Price (THB)": 405000,
         "TotalDiscount (THB)": 0,
         " Disc. Code": "",
         "Total Payment(THB)": 95000,
-        "TotalCash (THB)": 5000,
-        "TotalTransfer (THB)": 40000,
-        "TotalCredit/Debit(THB)": 20000
+        "Cash (THB)": 5000,
+        "Transfer (THB)": 40000,
+        "Credit/Debit(THB)": 20000
       }
     ],
     "summary": {

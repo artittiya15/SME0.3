@@ -58,6 +58,7 @@ const filter = [
 export default function TopFrequentMembers() {
   const componentRef = useRef();
   const [topFrequentMembers, setTopFrequentMembers] = useState();
+  const pageName = "TopFrequentMembers";
 
   useEffect(() => {
     async function fetchTopFrequentMembers() {
@@ -88,7 +89,7 @@ export default function TopFrequentMembers() {
       >
         <FilterList filterData={filter} />
         {topFrequentMembers && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={topFrequentMembers} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={topFrequentMembers} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

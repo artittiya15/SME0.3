@@ -61,11 +61,11 @@
       "summarytier": [
         {
           
-          "TotalRanking": "Total",
-          "TotalProduct Code": "",
-          "TotalCategory": "",
-          "TotalTransactions": 200,
-          "TotalQuantity (units)": 48,
+          "Ranking": "Total",
+          "Product Code": "",
+          "Category": "",
+          "Transactions": 200,
+          "Quantity (units)": 48,
           "Total Revenue (THB)": 43990,
           "Total Member": 230
         }

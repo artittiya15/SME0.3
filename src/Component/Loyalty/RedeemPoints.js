@@ -58,6 +58,7 @@ const filter = [
 export default function RedeemPoints() {
   const componentRef = useRef();
   const [redeemPoints, setRedeemPoints] = useState();
+  const pageName = "RedeemPoints";
 
   useEffect(() => {
     async function fetchRedeemPoints() {
@@ -88,7 +89,7 @@ export default function RedeemPoints() {
       >
         <FilterList filterData={filter} />
         {redeemPoints && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={redeemPoints} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={redeemPoints} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

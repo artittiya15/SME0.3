@@ -59,6 +59,7 @@ const filter = [
 export default function BigSpender() {
   const componentRef = useRef();
   const [bigSpender, setBigSpender] = useState();
+  const pageName = "BigSpender";
 
   useEffect(() => {
     async function fetchBigSpender() {
@@ -89,7 +90,7 @@ export default function BigSpender() {
       >
         <MemberFilter filterData={filter} />
         {bigSpender && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={bigSpender} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={bigSpender} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

@@ -58,6 +58,7 @@ const filter = [
 export default function EarnPoints() {
   const componentRef = useRef();
   const [earnPoint, setEarnPoint] = useState();
+  const pageName = "EarnPoints";
 
   useEffect(() => {
     async function fetchEarnPoint() {
@@ -88,7 +89,7 @@ export default function EarnPoints() {
       >
         <FilterList filterData={filter} />
         {earnPoint && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={earnPoint} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={earnPoint} pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12} container>

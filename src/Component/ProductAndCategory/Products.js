@@ -55,6 +55,7 @@ const filter = [
 export default function Products(props) {
   const componentRef = useRef();
   const [products, setProducts] = useState();
+  const pageName = "Products";
 
   async function fetchProducts() {
     setProducts(MockDataProduct.data);
@@ -87,7 +88,7 @@ export default function Products(props) {
          <SearchProduct /> 
         <FilterList filterData={filter} />
         {products && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={products} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={products} pageName={pageName} />
         )}
       </Grid>
       <Grid item xs={12} container>

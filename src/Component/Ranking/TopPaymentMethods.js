@@ -58,6 +58,7 @@ const filter = [
 export default function TopPaymentMethods() {
   const componentRef = useRef();
   const [TOPPaymentMethods, setTOPPaymentMethods] = useState();
+  const pageName = "TopPaymentMethods";
 
   async function fetchTOPPaymentMethods() {
     setTOPPaymentMethods(MockTopPaymentMethods.data);
@@ -89,7 +90,7 @@ export default function TopPaymentMethods() {
       >
         <FilterList filterData={filter} />
         {TOPPaymentMethods && (
-          <ActionBar handlePrint={handlePrint} dataExportCSV={TOPPaymentMethods} />
+          <ActionBar handlePrint={handlePrint} dataExportExcel={TOPPaymentMethods}  pageName={pageName}/>
         )}
       </Grid>
       <Grid item xs={12}  className={classes.textCard} container>
