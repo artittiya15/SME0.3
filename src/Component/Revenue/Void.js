@@ -13,7 +13,6 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-   
   },
 
   menuButton: {
@@ -22,14 +21,22 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  
+
   RevenueByMember: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
-    fontFamily:"MyriadPro",
-    lineHeight:"35px"
+    fontFamily: "MyriadPro",
+    lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -61,7 +68,6 @@ export default function Void() {
   const [RevenueMember, setRevenueMember] = useState();
   const pageName = "Void";
 
-
   async function fetchRevenueMember() {
     setRevenueMember(MockDataVoid.data);
   }
@@ -81,22 +87,24 @@ export default function Void() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold" ,marginLeft: "10px"}}>Void Report</Typography>
+        <Typography variant="h5" className={classes.Typography}>
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
         <FilterList filterData={filter} />
         {RevenueMember && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={RevenueMember} pageName={pageName} />
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={RevenueMember}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueMember && <CardTotal  type="single" value={RevenueMember.summary} />}
+        {RevenueMember && (
+          <CardTotal type="single" value={RevenueMember.summary} />
+        )}
       </Grid>
       <Grid item xs={12} container>
         {RevenueMember && <Table data={RevenueMember} />}

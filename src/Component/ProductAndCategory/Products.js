@@ -23,13 +23,21 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  RevenueByMember: {
+  Products: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
     fontFamily: "MyriadPro",
     lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -75,15 +83,15 @@ export default function Products(props) {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Product Report</Typography>
+      <Grid item xs={12} sm={6} className={classes.Products}>
+        <Typography variant="h5" className={classes.Typography}>{pageName}</Typography>
       </Grid>
       <Grid
         item
         xs={12}
         sm={6}
         container
-        style={{ display: "flex", justifyContent: "flex-end" }}
+        className={classes.FilterAction}
       >
          <SearchProduct /> 
         <FilterList filterData={filter} />

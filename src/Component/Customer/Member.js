@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import  MockDataMember from "../../MockData/Customer/MockDataMember.json"
+import MockDataMember from "../../MockData/Customer/MockDataMember.json";
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import Typography from "@material-ui/core/Typography";
@@ -21,13 +21,21 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  RevenueByMember: {
+  Member: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
     fontFamily: "MyriadPro",
     lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -83,20 +91,19 @@ export default function Member() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-      <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Member Report</Typography>
-        
+      <Grid item xs={12} sm={6} className={classes.Member}>
+        <Typography variant="h5" className={classes.Typography}>
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
         <MemberFilter filterData={filter} />
         {member && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={member} pageName={pageName}  />
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={member}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>

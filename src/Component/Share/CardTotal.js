@@ -50,6 +50,19 @@ const useStyles = makeStyles({
   typography: {
     fontFamily: ["Myriad Pro", "sans-serif"].join(","),
   },
+  GridMultiple: { textAlign: "left" },
+  TypographyKey: {
+    fontSize: "14px",
+  },
+  TypographyVal: {
+    fontWeight: 800,
+    fontSize: "14px",
+  },
+  TypographyMultiple: { fontWeight: 600, fontSize: 16 },
+  TypographySingle: {
+    fontWeight: 800,
+  },
+  CardContentSingle: { textAlign: "center" },
 });
 
 export default function CardTotal(props) {
@@ -65,7 +78,7 @@ export default function CardTotal(props) {
       .replace(/\d(?=(\d{3})+\.)/g, "$&,")
       .split(".")[0];
   return (
-    <Grid item xs={12} container style={{ textAlign: "left" }}>
+    <Grid item xs={12} container className={classes.GridMultiple}>
       {props.type === "multiple" ? (
         <>
           {Object.entries(props.value).map(([key, val], index) => {
@@ -82,13 +95,7 @@ export default function CardTotal(props) {
                   <CardContent className={classes.text}>
                     <Grid xs={12} item container>
                       <Grid item xs={12}>
-                        <Typography
-                          style={{
-                            fontWeight: 600,
-                            fontSize: 16,
-                            // paddingLeft: 10,
-                          }}
-                        >
+                        <Typography className={classes.TypographyMultiple}>
                           {key}
                         </Typography>
                       </Grid>
@@ -97,14 +104,12 @@ export default function CardTotal(props) {
                       return (
                         <Grid xs={12} item container key={index2}>
                           <Grid item xs={7}>
-                            <Typography style={{ fontSize: "14px" }}>
+                            <Typography className={classes.TypographyKey}>
                               {key2}
                             </Typography>
                           </Grid>
                           <Grid item xs={5}>
-                            <Typography
-                              style={{ fontWeight: 800, fontSize: "14px" }}
-                            >
+                            <Typography className={classes.TypographyVal}>
                               {formatNumber(val2)}
                             </Typography>
                           </Grid>
@@ -128,9 +133,9 @@ export default function CardTotal(props) {
                   }
                   variant="outlined"
                 >
-                  <CardContent style={{ textAlign: "center" }}>
+                  <CardContent className={classes.CardContentSingle}>
                     <Typography>{key}</Typography>
-                    <Typography style={{ fontWeight: 800 }}>
+                    <Typography className={classes.TypographySingle}>
                       {formatNumber(val)}
                     </Typography>
                   </CardContent>
@@ -165,7 +170,7 @@ export default function CardTotal(props) {
                                 container
                               >
                                 <Grid item xs={12}>
-                                  <Typography style={{ fontSize: "14px" }}>
+                                  <Typography className={classes.TypographyKey}>
                                     {key2}
                                   </Typography>
                                 </Grid>
@@ -177,7 +182,7 @@ export default function CardTotal(props) {
                                 container
                               >
                                 <Grid item xs={12}>
-                                  <Typography style={{   fontWeight: 800,fontSize: "16px" }}>
+                                  <Typography className={classes.TypographyVal}>
                                     {val2}
                                   </Typography>
                                 </Grid>
@@ -186,14 +191,12 @@ export default function CardTotal(props) {
                           ) : (
                             <Grid item xs={12} container>
                               <Grid item xs={6}>
-                                <Typography style={{ fontSize: "14px" }}>
+                                <Typography className={classes.TypographyKey}>
                                   {key2}
                                 </Typography>
                               </Grid>
                               <Grid item xs={6}>
-                                <Typography
-                                  style={{ fontWeight: 800, fontSize: "14px" }}
-                                >
+                                <Typography className={classes.TypographyVal}>
                                   {formatNumber(val2)}
                                 </Typography>
                               </Grid>

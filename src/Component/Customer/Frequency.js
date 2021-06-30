@@ -22,13 +22,21 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  RevenueByMember: {
+  Frequency: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
     fontFamily: "MyriadPro",
     lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -53,7 +61,6 @@ const filter = [
     filterName: "Custom Date",
     selected: false,
   },
-
 ];
 
 export default function Frequency() {
@@ -77,19 +84,20 @@ export default function Frequency() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-      <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Frequent Members</Typography>
+      <Grid item xs={12} sm={6} className={classes.Frequency}>
+        <Typography variant="h5" className={classes.Typography}>
+          {" "}
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
-        <MemberFilter filterData={filter}  />
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
+        <MemberFilter filterData={filter} />
         {frequency && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={frequency} pageName={pageName} />
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={frequency}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>

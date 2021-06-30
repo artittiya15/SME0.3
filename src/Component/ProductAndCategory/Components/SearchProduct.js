@@ -65,6 +65,52 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  ButtonByButtonGroup: {
+    border: "none",
+  },
+  SearchOnIcon: {
+    display: "flex",
+    paddingLeft: 10,
+    alignItems: "center",
+    width: "100%",
+    marginLeft: 80,
+    marginRight: 80,
+    borderColor: "rgb(63 81 181 / 4%)",
+    borderRadius: 20,
+    borderStyle: "inset",
+    color: "#787885",
+    background: "#EDEDF0",
+  },
+  DialogTitle: {
+    textAlign: "center",
+    color: "#FA9917",
+    fontFamily: "MyriadPro",
+    fontSize: " 40px",
+  },
+  InputBase: {
+    paddingLeft: 10,
+    width: "100%",
+  },
+  DialogActionsSearchIcon: {
+    justifyContent: "center",
+  },
+  ButtonSearch: {
+    borderRadius: 0,
+    backgroundColor: "orange",
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
+    fontSize: 12,
+  },
+  DialogContent: {
+    width: 600,
+    padding: 0,
+  },
+  SearchByList: { cursor: "pointer" },
+  DialogActions: {
+    justifyContent: "space-around",
+    margin: 0,
+    padding: 0,
+  },
 }));
 
 export default function SearchProduct(props) {
@@ -92,11 +138,11 @@ export default function SearchProduct(props) {
   return (
     <>
       <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
-        <Button style={{ border: "none" }}>
+        <Button className={classes.ButtonByButtonGroup}>
           {selectedProduct && selectedProduct.productName}
         </Button>
         <Button
-          style={{ border: "none" }}
+          className={classes.ButtonByButtonGroup}
           size="small"
           onClick={handleClickOpenDialog}
         >
@@ -110,55 +156,25 @@ export default function SearchProduct(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle
-          id="alert-dialog-title"
-          style={{
-            textAlign: "center",
-            color: "#FA9917",
-            fontFamily: "MyriadPro",
-            fontSize: " 40px",
-          }}
-        >
+        <DialogTitle id="alert-dialog-title" className={classes.DialogTitle}>
           {"Select Product"}
         </DialogTitle>
         <DialogActions
           // className={classes.searchIcon}
-          style={{ justifyContent: "center" }}
+          className={classes.DialogActionsSearchIcon}
         >
-          <div
-            style={{
-              display: "flex",
-              paddingLeft: 10,
-              alignItems: "center",
-              width: "100%",
-              marginLeft: 80,
-              marginRight: 80,
-              borderColor: "rgb(0 0 0 / 14%)",
-              borderRadius: 20,
-              borderStyle: "inset",
-            }}
-          >
+          <div className={classes.SearchOnIcon}>
             <SearchIcon />
             <InputBase
-              placeholder="Search…"
-              style={{ paddingLeft: 10, width: "100%" }}
+              placeholder="SearchProduct"
+              className={classes.InputBase}
               inputProps={{ "aria-label": "search" }}
             />
-            <Button
-              style={{
-                borderRadius: 0,
-                backgroundColor: "orange",
-                borderTopRightRadius: 20,
-                borderBottomRightRadius: 20,
-                fontSize: 12,
-              }}
-            >
-              Search
-            </Button>
+            <Button className={classes.ButtonSearch}>Search</Button>
           </div>
         </DialogActions>
         <DialogContent
-          style={{ width: 600, padding: 0 }}
+          className={classes.DialogContent}
           // className={classes.search}
         >
           <List
@@ -174,7 +190,7 @@ export default function SearchProduct(props) {
                     onClick={() => {
                       setSelectedProduct(item);
                     }}
-                    style={{ cursor: "pointer" }}
+                    className={classes.SearchByList}
                   >
                     <ListItemAvatar>
                       <Avatar>
@@ -192,7 +208,7 @@ export default function SearchProduct(props) {
           </List>
         </DialogContent>
 
-        <DialogActions style={{ justifyContent: "space-around", margin: 0 }}>
+        <DialogActions className={classes.DialogActions}>
           <Button
             onClick={handleCloseDialog}
             style={{

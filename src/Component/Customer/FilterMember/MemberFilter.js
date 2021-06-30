@@ -48,7 +48,19 @@ const useStyles = makeStyles((theme) => ({
   MenuItem: {
     width: "120px",
   },
-  
+  ButtonFilter: {
+    borderRadius: 50,
+    textTransform: "none",
+    color: "#FFFFFF",
+    background: "#FA9917",
+    marginRight: "20px",
+  },
+  GridContainer: {
+    justifyContent: "space-around",
+    padding: "10px",
+  },
+  ButtonNameCancle: { color: "#828282" },
+  ButtonNameDone: { backgroundColor: "#FA9917", color: "white" },
 }));
 
 const StyledMenu = withStyles({
@@ -169,13 +181,7 @@ export default function MemberFilter({ filterData }) {
         aria-haspopup="true"
         variant="contained"
         onClick={handleClick}
-        style={{
-          borderRadius: 50,
-          textTransform: "none",
-          color: "#FFFFFF",
-          background: "#FA9917",
-          marginRight: "20px"
-        }}
+        className={classes.ButtonFilter}
       >
         <FilterListIcon className={classes.FilterListIcon}></FilterListIcon>
         Filter
@@ -215,15 +221,12 @@ export default function MemberFilter({ filterData }) {
           ranges={dateSelected}
           rangeColors={["#FA9917"]}
         />
-        <Grid
-          container
-          style={{ justifyContent: "space-around", padding: "10px" }}
-        >
+        <Grid container className={classes.GridContainer}>
           <Button
             onClick={() => {
               setOpenCalendar(false);
             }}
-            style={{ color: "#828282" }}
+            className={classes.ButtonNameCancle}
           >
             Cancel
           </Button>
@@ -231,7 +234,7 @@ export default function MemberFilter({ filterData }) {
             onClick={() => {
               handleClickFilter("Custom Date");
             }}
-            style={{ backgroundColor: "#FA9917", color: "white" }}
+           className={classes.ButtonNameDone}
           >
             Done
           </Button>

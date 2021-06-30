@@ -22,13 +22,21 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  RevenueByMember: {
+  TopFrequentMembers: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
     fontFamily: "MyriadPro",
     lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -62,7 +70,7 @@ export default function TopFrequentMembers() {
 
   useEffect(() => {
     async function fetchTopFrequentMembers() {
-        setTopFrequentMembers(MockTopBigSpenders.data);
+      setTopFrequentMembers(MockTopBigSpenders.data);
     }
     fetchTopFrequentMembers();
   }, []);
@@ -77,23 +85,25 @@ export default function TopFrequentMembers() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-       <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Top Frequent Members</Typography>
+      <Grid item xs={12} sm={6} className={classes.TopFrequentMembers}>
+        <Typography variant="h5" className={classes.Typography}>
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
         <FilterList filterData={filter} />
         {topFrequentMembers && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={topFrequentMembers} pageName={pageName} />
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={topFrequentMembers}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>
-        {topFrequentMembers && <CardTotal type="mixed" value={topFrequentMembers.summary} />}
+        {topFrequentMembers && (
+          <CardTotal type="mixed" value={topFrequentMembers.summary} />
+        )}
       </Grid>
       <Grid item xs={12} container>
         {topFrequentMembers && <Table data={topFrequentMembers} />}

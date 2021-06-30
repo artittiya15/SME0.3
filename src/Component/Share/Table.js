@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   TextTableBody: {
     textAlign: "left",
   },
+  
 }));
 const StyledTableRow = withStyles((i) => ({
   root: {
@@ -63,7 +64,7 @@ export default function AccessibleTable(props) {
                 return (
                   <TableCell
                     className={classes.ColorText}
-                    ref={(cell) => {//รับค่าความกว้างของ headerTable to footer
+                    ref={(cell) => {
                       if (cell !== null && footer.length <= index)
                         setFooter((headers) => [...headers, cell.offsetWidth]);
                     }}
@@ -91,7 +92,7 @@ export default function AccessibleTable(props) {
                         dangerouslySetInnerHTML={{ __html: val }}
                         align="left"
                         className={classes.ColorText}
-                      />// แสดงข้อความที่เป็น html
+                      />
                     )}
                   </React.Fragment>
                 ))}

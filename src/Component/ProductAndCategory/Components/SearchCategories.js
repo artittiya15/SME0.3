@@ -61,6 +61,51 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  ButtonByButtonGroup:{
+    border: "none"
+  },
+  SearchOnIcon: {
+    display: "flex",
+    paddingLeft: 10,
+    alignItems: "center",
+    width: "100%",
+    marginLeft: 80,
+    marginRight: 80,
+    borderColor: "rgb(63 81 181 / 4%)",
+    borderRadius: 20,
+    borderStyle: "inset",
+    color: "#787885",
+    background: "#EDEDF0"
+  },
+  DialogTitle: {
+    textAlign: "center",
+    color: "#FA9917",
+    fontFamily: "MyriadPro",
+    fontSize: " 40px",
+  },
+  InputBase:{
+    paddingLeft: 10, width: "100%" 
+  },
+  DialogActionsSearchIcon:{
+    justifyContent: "center" 
+ },
+ ButtonSearch: {
+  borderRadius: 0,
+  backgroundColor: "orange",
+  borderTopRightRadius: 20,
+  borderBottomRightRadius: 20,
+  fontSize: 12,
+},
+DialogContent:{
+  width: 600, 
+  padding: 0 
+},
+SearchByList:{ cursor: "pointer",
+},
+DialogActions:{
+  justifyContent: "space-around", margin: 0 ,padding: 0
+
+},
 }));
 
 export default function SearchCategories(props) {
@@ -91,11 +136,11 @@ export default function SearchCategories(props) {
   return (
     <>
       <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
-        <Button style={{ border: "none" }}>
+        <Button className={classes.ButtonByButtonGroup}>
           {confirm && confirm.CategoryName}
         </Button>
         <Button
-          style={{ border: "none" }}
+          className={classes.ButtonByButtonGroup}
           size="small"
           onClick={handleClickOpenDialog}
         >
@@ -111,49 +156,29 @@ export default function SearchCategories(props) {
       >
         <DialogTitle
           id="alert-dialog-title"
-          style={{
-            textAlign: "center",
-            color: "#FA9917",
-            fontFamily: "MyriadPro",
-            fontSize: " 40px",
-          }}
+          className={classes.DialogTitle}
         >
           {"Select Category"}
         </DialogTitle>
-        <DialogActions style={{ justifyContent: "center" }}>
+        <DialogActions className={classes.DialogActionsSearchIcon}>
           <div
-            style={{
-              display: "flex",
-              paddingLeft: 10,
-              alignItems: "center",
-              width: "100%",
-              marginLeft: 80,
-              marginRight: 80,
-              borderColor: "rgb(0 0 0 / 14%)",
-              borderRadius: 20,
-              borderStyle: "inset",
-            }}
+        className={classes.SearchOnIcon}
           >
             <SearchIcon />
             <InputBase
-              placeholder="Search…"
-              style={{ paddingLeft: 10, width: "100%" }}
+              placeholder="search category"
+              className={classes.InputBase}
               inputProps={{ "aria-label": "search" }}
             />
             <Button
-              style={{
-                borderRadius: 0,
-                backgroundColor: "orange",
-                borderTopRightRadius: 20,
-                borderBottomRightRadius: 20,
-                fontSize: 12,
-              }}
+            className={classes.ButtonSearch}
+             
             >
               Search
             </Button>
           </div>
         </DialogActions>
-        <DialogContent style={{ width: 600, padding: 0 }}>
+        <DialogContent className={classes.DialogContent}>
           <List
             component="nav"
             className={classes.root}
@@ -167,7 +192,7 @@ export default function SearchCategories(props) {
                     onClick={() => {
                       setSelectedCategories(item);
                     }}
-                    style={{ cursor: "pointer" }}
+                    className={classes.SearchByList}
                   >
                     <ListItemAvatar>
                       <Avatar>
@@ -185,7 +210,7 @@ export default function SearchCategories(props) {
           </List>
         </DialogContent>
 
-        <DialogActions style={{ justifyContent: "space-around", margin: 0 }}>
+        <DialogActions className={classes.DialogActions}>
           <Button
             onClick={handleCloseDialog}
             style={{

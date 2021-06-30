@@ -13,7 +13,6 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-   
   },
 
   menuButton: {
@@ -22,14 +21,22 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  
-  RevenueByMember: {
+
+  RevenueByWalkIn: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
-    fontFamily:"MyriadPro",
-    lineHeight:"35px"
+    fontFamily: "MyriadPro",
+    lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -79,23 +86,25 @@ export default function RevenueWalkIn() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Walk-In Revenue</Typography>
+      <Grid item xs={12} sm={6} className={classes.RevenueByWalkIn}>
+        <Typography variant="h5" className={classes.Typography}>
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
         <FilterList filterData={filter} />
         {RevenueWalkIn && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={RevenueWalkIn} pageName={pageName}/>
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={RevenueWalkIn}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>
-        {RevenueWalkIn && <CardTotal type="single" value={RevenueWalkIn.summary} />}
+        {RevenueWalkIn && (
+          <CardTotal type="single" value={RevenueWalkIn.summary} />
+        )}
       </Grid>
       <Grid item xs={12} container>
         {RevenueWalkIn && <Table data={RevenueWalkIn} />}

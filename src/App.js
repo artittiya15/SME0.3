@@ -6,7 +6,7 @@ import Navbar from "./Component/Share/Navbar";
 import AllRevenue from "./Component/Revenue/AllRevenue";
 import RevenueMember from "./Component/Revenue/RevenueMember";
 import RevenueWalkIn from "./Component/Revenue/RevenueWalkIn";
-import Transection from "./Component/Revenue/Transection";
+import Transaction from "./Component/Revenue/Transaction";
 import Void from "./Component/Revenue/Void";
 import TopPaymentMethods from "./Component/Ranking/TopPaymentMethods";
 import TopProduct from "./Component/Ranking/TopProducts";
@@ -48,8 +48,8 @@ function App() {
             <Route path="/revenue-walk-in">
               <RevenueWalkIn />
             </Route>
-            <Route path="/transection">
-              <Transection />
+            <Route path="/transaction">
+              <Transaction />
             </Route>
             <Route path="/void">
               <Void />

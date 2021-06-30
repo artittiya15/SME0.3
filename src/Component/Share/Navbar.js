@@ -152,7 +152,7 @@ export default function MenuAppBar() {
             "all-revenue",
             "revenue-member",
             "revenue-walk-in",
-            "transection",
+            "transaction",
             "void",
           ].map((text, index) => (
             <ListItem button key={index}>

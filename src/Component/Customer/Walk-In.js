@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import BreadcrumbBar from "./../Share/BreadcrumbBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CardTotal from "./../Share/CardTotal";
-import MockDataWalkIn from"../../MockData/Customer/MockDataWalkIn.json";
+import MockDataWalkIn from "../../MockData/Customer/MockDataWalkIn.json";
 import Table from "./../Share/Table";
 import { useReactToPrint } from "react-to-print";
 import { Typography } from "@material-ui/core";
@@ -13,7 +13,6 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-   
   },
 
   menuButton: {
@@ -22,16 +21,23 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  
-  RevenueByMember: {
+
+  WalkIn: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
-    fontFamily:"MyriadPro",
-    lineHeight:"35px"
+    fontFamily: "MyriadPro",
+    lineHeight: "35px",
   },
- 
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
 }));
 
 const filter = [
@@ -55,7 +61,6 @@ const filter = [
     filterName: "Custom Date",
     selected: false,
   },
-
 ];
 
 export default function WalkIn() {
@@ -81,23 +86,23 @@ export default function WalkIn() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Walk-In Report</Typography>
+      <Grid item xs={12} sm={6} className={classes.WalkIn}>
+        <Typography variant="h5" className={classes.Typography}>
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
         <FilterList filterData={filter} />
         {walkIn && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={walkIn}  pageName={pageName}/>
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={walkIn}
+            pageName={pageName}
+          />
         )}
       </Grid>
-      <Grid item xs={12}  container>
-        {walkIn && <CardTotal   type="single" value={walkIn.summary} />}
+      <Grid item xs={12} container>
+        {walkIn && <CardTotal type="single" value={walkIn.summary} />}
       </Grid>
       <Grid item xs={12} container>
         {walkIn && <Table data={walkIn} />}

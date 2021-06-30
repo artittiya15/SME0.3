@@ -28,7 +28,8 @@
     "react-scripts": "4.0.3",
     "react-sticky-table": "^5.1.11",
     "react-to-print": "^2.12.6",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "xlsx": "^0.17.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   
-  RevenueByMember: {
+  MemberAndWalkIn: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
@@ -30,7 +30,14 @@ const useStyles = makeStyles((theme) => ({
     fontFamily:"MyriadPro",
     lineHeight:"35px"
   },
- 
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
 }));
 
 const filter = [
@@ -78,15 +85,15 @@ export default function MemberAndWalkIn() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>All Customer Report</Typography>
+      <Grid item xs={12} sm={6} className={classes.MemberAndWalkIn}>
+        <Typography variant="h5"  className={classes.Typography}>{pageName}</Typography>
       </Grid>
       <Grid
         item
         xs={12}
         sm={6}
         container
-        style={{ display: "flex", justifyContent: "flex-end" }}
+        className={classes.FilterAction}
       >
         <FilterList filterData={filter} />
         {memberAndWalkIn && (

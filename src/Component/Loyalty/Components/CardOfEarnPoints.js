@@ -48,6 +48,26 @@ const useStyles = makeStyles({
     border: "4px solid #EBEBEB",
     textAlign: "center",
   },
+  TypographyCardKey: {
+    fontWeight: 600,
+    textAlign: "center",
+  },
+  CardConTentSecond: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  TireIcon: {
+    display: "flex",
+    alignItems: "center",
+  },
+  TypographyVal: {
+    paddingLeft: 10,
+  },
+  CardContent: { textAlign: "center" },
+  TypographySingleKey: { fontWeight: 600 },
+  TypographySingleVal: { fontWeight: 800 },
 });
 
 export default function CardOfEarnPoints(props) {
@@ -78,26 +98,14 @@ export default function CardOfEarnPoints(props) {
             >
               <Card className={classes.root} variant="outlined">
                 <CardContent>
-                  <Typography style={{ fontWeight: 600, textAlign: "center" }}>{key}</Typography>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
+                  <Typography className={classes.TypographyCardKey}>
+                    {key}
+                  </Typography>
+                  <div className={classes.CardConTentSecond}>
                     {Object.entries(val).map(([key2, val2], index2) => (
-                      <div
-                        key={index2}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          
-                        }}
-                      >
+                      <div key={index2} className={classes.TierIcon}>
                         <TierIcon level={key2} />
-                        <Typography style={{ paddingLeft: 10 }}>
+                        <Typography className={classes.TypographyVal}>
                           {val2}
                         </Typography>
                       </div>
@@ -117,9 +125,11 @@ export default function CardOfEarnPoints(props) {
                 }
                 variant="outlined"
               >
-                <CardContent style={{ textAlign: "center" }}>
-                  <Typography style={{ fontWeight: 600 }}>{key}</Typography>
-                  <Typography style={{ fontWeight: 800 }}>
+                <CardContent className={classes.CardContent}>
+                  <Typography className={classes.TypographySingleKey}>
+                    {key}
+                  </Typography>
+                  <Typography className={classes.TypographySingleVal}>
                     {formatNumber(val)}
                   </Typography>
                 </CardContent>

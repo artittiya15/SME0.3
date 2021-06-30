@@ -22,13 +22,21 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  RevenueByMember: {
+  RedeemPoints: {
     fontSize: "30px",
     color: "#FA9917",
     display: "flex",
     alignItems: "flex-end",
     fontFamily: "MyriadPro",
     lineHeight: "35px",
+  },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -77,23 +85,25 @@ export default function RedeemPoints() {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography variant="h5" style={{fontWeight:"bold",marginLeft: "10px"}}>Total Redeem Points</Typography>
+      <Grid item xs={12} sm={6} className={classes.RedeemPoints}>
+        <Typography variant="h5" className={classes.Typography}>
+          {pageName}
+        </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sm={6}
-        container
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12} sm={6} container className={classes.FilterAction}>
         <FilterList filterData={filter} />
         {redeemPoints && (
-          <ActionBar handlePrint={handlePrint} dataExportExcel={redeemPoints} pageName={pageName} />
+          <ActionBar
+            handlePrint={handlePrint}
+            dataExportExcel={redeemPoints}
+            pageName={pageName}
+          />
         )}
       </Grid>
       <Grid item xs={12} container>
-        {redeemPoints && <CardOfEarnPoints type="single" value={redeemPoints.summary} />}
+        {redeemPoints && (
+          <CardOfEarnPoints type="single" value={redeemPoints.summary} />
+        )}
       </Grid>
       <Grid item xs={12} container>
         {redeemPoints && <Table data={redeemPoints} />}

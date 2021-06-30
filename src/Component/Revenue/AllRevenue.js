@@ -30,6 +30,14 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "MyriadPro",
     lineHeight: "35px",
   },
+  Typography: {
+    fontWeight: "bold",
+    marginLeft: "10px",
+  },
+  FilterAction: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
 }));
 
 const filter = [
@@ -56,7 +64,7 @@ const filter = [
 ];
 
 export default function AllRevenue() {
-  const pageName = "Revenue";
+  const pageName = "AllRevenue";
   const componentRef = useRef();
   const [allRevenue, setAllRevenue] = useState();
 
@@ -78,10 +86,7 @@ export default function AllRevenue() {
         <BreadcrumbBar />
       </Grid>
       <Grid item xs={12} sm={6} className={classes.RevenueByMember}>
-        <Typography
-          variant="h5"
-          style={{ fontWeight: "bold", marginLeft: "10px" }}
-        >
+        <Typography variant="h5" className={classes.Typography}>
           {pageName}
         </Typography>
       </Grid>
@@ -90,7 +95,7 @@ export default function AllRevenue() {
         xs={12}
         sm={6}
         container
-        style={{ display: "flex", justifyContent: "flex-end" }}
+        className={classes.FilterAction}
       >
         <FilterList filterData={filter} />
         {allRevenue && (
