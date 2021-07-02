@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: theme.spacing(3),
     overflowX: "hidden",
+    
   },
   container: {
     maxHeight: window.innerHeight - 350,
     color: "#828282",
+    boxShadow: "0px 5px 5px #ebebeb"
   },
   footer: {
     display: "flex",
@@ -37,10 +39,14 @@ const useStyles = makeStyles((theme) => ({
   },
   ColorText: {
     color: "#828282",
+    
   },
   TextTableBody: {
     textAlign: "left",
   },
+  TableHeader:{boxShadow: "0px 5px 5px #ebebeb"
+
+  }
   
 }));
 const StyledTableRow = withStyles((i) => ({
@@ -58,7 +64,7 @@ export default function AccessibleTable(props) {
     <Paper className={classes.root}>
       <TableContainer className={classes.container} component={Paper}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead>
+          <TableHead className={classes.TableHeader}>
             <TableRow>
               {Object.entries(props.data.list[0]).map(([key, _], index) => {
                 return (

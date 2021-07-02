@@ -83,13 +83,13 @@ export default function Products(props) {
       <Grid item xs={12}>
         <BreadcrumbBar />
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.Products}>
+      <Grid item xs={12} sm={3} className={classes.Products}>
         <Typography variant="h5" className={classes.Typography}>{pageName}</Typography>
       </Grid>
       <Grid
         item
         xs={12}
-        sm={6}
+        sm={9}
         container
         className={classes.FilterAction}
       >

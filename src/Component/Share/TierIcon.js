@@ -8,15 +8,15 @@ export default function TierIcon(props) {
   return (
     <>
       {props.level === "platinum" ? (
-        <Platinum />
+        <Platinum width={props.width} height={props.height} />
       ) : props.level === "gold" ? (
-        <Gold />
+        <Gold width={props.width} height={props.height} />
       ) : props.level === "silver" ? (
-        <Silver />
+        <Silver width={props.width} height={props.height} />
       ) : props.level === "bronze" ? (
-        <Bronze />
+        <Bronze width={props.width} height={props.height} />
       ) : props.level === "standard" ? (
-        <Standard />
+        <Standard width={props.width} height={props.height} />
       ) :(
         <> </>
       )}

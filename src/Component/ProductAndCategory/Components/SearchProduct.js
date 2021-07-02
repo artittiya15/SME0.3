@@ -67,6 +67,8 @@ const useStyles = makeStyles((theme) => ({
   },
   ButtonByButtonGroup: {
     border: "none",
+    textTransform: "none",
+    color: "#828282"
   },
   SearchOnIcon: {
     display: "flex",
@@ -116,7 +118,12 @@ const useStyles = makeStyles((theme) => ({
 export default function SearchProduct(props) {
   const classes = useStyles();
   const [Search, setSearch] = useState();
-  const [selectedProduct, setSelectedProduct] = React.useState();
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const [selectedProduct, setSelectedProduct] = React.useState({
+    image: "",
+    productName: "default top1 product name",
+    productNumber: ""
+  });
 
   useEffect(() => {
     async function fetchSearchProduct() {
@@ -125,7 +132,7 @@ export default function SearchProduct(props) {
     fetchSearchProduct();
   }, []);
 
-  const [openDialog, setOpenDialog] = React.useState(false);
+ 
 
   const handleClickOpenDialog = () => {
     setOpenDialog(true);
@@ -134,17 +141,17 @@ export default function SearchProduct(props) {
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
-
+  const [confirm,setConfirm]= React.useState(selectedProduct)
   return (
     <>
-      <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
+      <ButtonGroup aria-label="split button" className={classes.ButtonGroup} onClick={handleClickOpenDialog}>
         <Button className={classes.ButtonByButtonGroup}>
-          {selectedProduct && selectedProduct.productName}
+          {confirm && confirm.productName}
         </Button>
+        
         <Button
           className={classes.ButtonByButtonGroup}
           size="small"
-          onClick={handleClickOpenDialog}
         >
           <ArrowDropDownIcon />
         </Button>
@@ -222,7 +229,10 @@ export default function SearchProduct(props) {
             Cancel
           </Button>
           <Button
-            onClick={handleCloseDialog}
+             onClick={() => {
+              setConfirm(selectedProduct);
+              setOpenDialog(false);
+            }} //
             style={{
               borderRadius: 0,
               backgroundColor: "#FA9917",

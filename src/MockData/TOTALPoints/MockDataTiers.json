@@ -102,21 +102,21 @@
     ],
     "summary": {
       "Member": {
-        "Member.": 363,
+        "ToTalMember.": 363,
         "Revenue(THB)": 400500,
         "LTV(THB)": 2000500,
         "Transaction": 970
       },
       "Tier": [
         {
-          "Tier": "Standard",
+          "Tier": "standard",
           "Number": 100,
           "Revenue(THB)": 30000,
           "LTV(THB)": 450000,
           "Transaction": 130
         },
         {
-          "Tier": "Bronze",
+          "Tier": "bronze",
           "Number": 20,
           "Revenue(THB)": 30000,
           "LTV(THB)": 450000,

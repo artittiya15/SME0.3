@@ -42,25 +42,22 @@ const useStyles = makeStyles((theme) => ({
 
 const filter = [
   {
-    filterName: "All Tiers",
+    filterName: "All ",
+    selected: false, 
+  },
+  {
+    filterName: "TopLTV",
     selected: false,
   },
   {
-    filterName: "Standard",
+    filterName: "Top Revenue",
     selected: false,
   },
   {
-    filterName: "Bronze",
+    filterName: "Top Big Spender",
     selected: false,
   },
-  {
-    filterName: "Silver",
-    selected: false,
-  },
-  {
-    filterName: "Gold",
-    selected: false,
-  },
+ 
 ];
 
 export default function Tiers(props) {
@@ -101,7 +98,7 @@ export default function Tiers(props) {
         )}
       </Grid>
       <Grid item xs={12} container>
-        {tiers && <CardOfTier type="single" value={tiers.summary} />}
+        {tiers && <CardOfTier value={tiers.summary} />}
       </Grid>
       <Grid item xs={12} container>
         {tiers && <Table data={tiers} />}

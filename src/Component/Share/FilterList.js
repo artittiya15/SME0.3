@@ -92,7 +92,7 @@ const StyledMenu = withStyles({
 export default function FilterList({ filterData }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
-
+  const [filter, setFilter] = useState([]);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -132,12 +132,12 @@ export default function FilterList({ filterData }) {
 
     let nextValue = filter.map((item) => {
       if (item.filterName === filterName) item.selected = !item.selected;
+      else item.selected = false;
       return item;
     });
     setFilter([...nextValue]);
   };
 
-  const [filter, setFilter] = useState([]);
   useEffect(() => {
     setFilter(filterData);
   }, [filterData]);
@@ -200,6 +200,7 @@ export default function FilterList({ filterData }) {
                 primary={filterName}
                 onClick={() => {
                   handleClickFilter(filterName, selected);
+                  setAnchorEl(null);
                 }}
               />
             </MenuItem>
