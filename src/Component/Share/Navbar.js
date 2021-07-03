@@ -165,11 +165,12 @@ export default function MenuAppBar() {
         <Typography>Ranking</Typography>
         <List>
           {[
+            "TopPaymentMethods",
+            "TopProduct",
+            "TopProductCategory",
             "TopBigSpender",
             "TopFrequentMembers",
-            "TopPaymentMethods",
-            "TopProductCategory",
-            "TopProduct",
+            
           ].map((text, index) => (
             <ListItem button key={index}>
               <Link to={"/" + text}>{text}</Link>
@@ -182,8 +183,8 @@ export default function MenuAppBar() {
             "BigSpender",
             "Frequency",
             "Member",
-            "MemberAndWalkIn",
             "WalkIn",
+            "MemberAndWalkIn",
           ].map((text, index) => (
             <ListItem button key={index}>
               <Link to={"/" + text}>{text}</Link>
