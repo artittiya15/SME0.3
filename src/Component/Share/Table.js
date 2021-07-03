@@ -30,12 +30,13 @@ const useStyles = makeStyles((theme) => ({
     height: "50px",
     textAlign: "left",
     flexDirection: "row",
-    position: "fixed",
+    // position: "fixed",
     bottom: 0,
     left: 0,
     backgroundColor: "white",
     zIndex: 999,
     fontWeight: 600,
+    position: "absolute"
   },
   ColorText: {
     color: "#828282",

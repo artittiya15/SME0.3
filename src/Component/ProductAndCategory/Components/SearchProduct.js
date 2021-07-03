@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   ButtonByButtonGroup: {
     border: "none",
     textTransform: "none",
-    color: "#828282"
+    color: "#828282",
   },
   SearchOnIcon: {
     display: "flex",
@@ -122,7 +122,7 @@ export default function SearchProduct(props) {
   const [selectedProduct, setSelectedProduct] = React.useState({
     image: "",
     productName: "default top1 product name",
-    productNumber: ""
+    productNumber: "",
   });
 
   useEffect(() => {
@@ -132,8 +132,6 @@ export default function SearchProduct(props) {
     fetchSearchProduct();
   }, []);
 
- 
-
   const handleClickOpenDialog = () => {
     setOpenDialog(true);
   };
@@ -141,18 +139,19 @@ export default function SearchProduct(props) {
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
-  const [confirm,setConfirm]= React.useState(selectedProduct)
+  const [confirm, setConfirm] = React.useState(selectedProduct);
   return (
     <>
-      <ButtonGroup aria-label="split button" className={classes.ButtonGroup} onClick={handleClickOpenDialog}>
+      <ButtonGroup
+        aria-label="split button"
+        className={classes.ButtonGroup}
+        onClick={handleClickOpenDialog}
+      >
         <Button className={classes.ButtonByButtonGroup}>
           {confirm && confirm.productName}
         </Button>
-        
-        <Button
-          className={classes.ButtonByButtonGroup}
-          size="small"
-        >
+
+        <Button className={classes.ButtonByButtonGroup} size="small">
           <ArrowDropDownIcon />
         </Button>
       </ButtonGroup>
@@ -229,7 +228,7 @@ export default function SearchProduct(props) {
             Cancel
           </Button>
           <Button
-             onClick={() => {
+            onClick={() => {
               setConfirm(selectedProduct);
               setOpenDialog(false);
             }} //

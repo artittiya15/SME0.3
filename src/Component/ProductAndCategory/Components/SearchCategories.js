@@ -61,8 +61,10 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  ButtonByButtonGroup:{
-    border: "none"
+  ButtonByButtonGroup: {
+    border: "none",
+    textTransform: "none",
+    color: "#828282",
   },
   SearchOnIcon: {
     display: "flex",
@@ -75,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 20,
     borderStyle: "inset",
     color: "#787885",
-    background: "#EDEDF0"
+    background: "#EDEDF0",
   },
   DialogTitle: {
     textAlign: "center",
@@ -83,37 +85,40 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "MyriadPro",
     fontSize: " 40px",
   },
-  InputBase:{
-    paddingLeft: 10, width: "100%" 
+  InputBase: {
+    paddingLeft: 10,
+    width: "100%",
   },
-  DialogActionsSearchIcon:{
-    justifyContent: "center" 
- },
- ButtonSearch: {
-  borderRadius: 0,
-  backgroundColor: "orange",
-  borderTopRightRadius: 20,
-  borderBottomRightRadius: 20,
-  fontSize: 12,
-},
-DialogContent:{
-  width: 600, 
-  padding: 0 
-},
-SearchByList:{ cursor: "pointer",
-},
-DialogActions:{
-  justifyContent: "space-around", margin: 0 ,padding: 0
-
-},
+  DialogActionsSearchIcon: {
+    justifyContent: "center",
+  },
+  ButtonSearch: {
+    borderRadius: 0,
+    backgroundColor: "orange",
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
+    fontSize: 12,
+  },
+  DialogContent: {
+    width: 600,
+    padding: 0,
+  },
+  SearchByList: { cursor: "pointer" },
+  DialogActions: {
+    justifyContent: "space-around",
+    margin: 0,
+    padding: 0,
+  },
 }));
 
 export default function SearchCategories(props) {
   const classes = useStyles();
   const [Search, setSearch] = useState();
-  const [selectedCategories, setSelectedCategories] = React.useState();
- 
-  
+  const [selectedCategories, setSelectedCategories] = React.useState({
+    image: "",
+    CategoryName: "default top1 product name",
+    CategoryNumber: "",
+  });
 
   useEffect(() => {
     async function fetchSearchCategories() {
@@ -131,19 +136,20 @@ export default function SearchCategories(props) {
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
-  const [confirm,setConfirm]= React.useState(selectedCategories)
+  const [confirm, setConfirm] = React.useState(selectedCategories);
 
   return (
     <>
-      <ButtonGroup aria-label="split button" className={classes.ButtonGroup}>
+      <ButtonGroup
+        aria-label="split button"
+        className={classes.ButtonGroup}
+        onClick={handleClickOpenDialog}
+      >
         <Button className={classes.ButtonByButtonGroup}>
           {confirm && confirm.CategoryName}
         </Button>
-        <Button
-          className={classes.ButtonByButtonGroup}
-          size="small"
-          onClick={handleClickOpenDialog}
-        >
+        
+        <Button className={classes.ButtonByButtonGroup} size="small">
           <ArrowDropDownIcon />
         </Button>
       </ButtonGroup>
@@ -154,28 +160,18 @@ export default function SearchCategories(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle
-          id="alert-dialog-title"
-          className={classes.DialogTitle}
-        >
+        <DialogTitle id="alert-dialog-title" className={classes.DialogTitle}>
           {"Select Category"}
         </DialogTitle>
         <DialogActions className={classes.DialogActionsSearchIcon}>
-          <div
-        className={classes.SearchOnIcon}
-          >
+          <div className={classes.SearchOnIcon}>
             <SearchIcon />
             <InputBase
               placeholder="search category"
               className={classes.InputBase}
               inputProps={{ "aria-label": "search" }}
             />
-            <Button
-            className={classes.ButtonSearch}
-             
-            >
-              Search
-            </Button>
+            <Button className={classes.ButtonSearch}>Search</Button>
           </div>
         </DialogActions>
         <DialogContent className={classes.DialogContent}>

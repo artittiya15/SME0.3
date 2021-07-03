@@ -195,14 +195,14 @@ export default function FilterList({ filterData }) {
       >
         {filter.map(({ filterName, selected }, index) => {
           return (
-            <MenuItem key={index}>
-              <ListItemText
-                primary={filterName}
-                onClick={() => {
-                  handleClickFilter(filterName, selected);
-                  setAnchorEl(null);
-                }}
-              />
+            <MenuItem
+              key={index}
+              onClick={() => {
+                handleClickFilter(filterName, selected);
+                setAnchorEl(null);
+              }}
+            >
+              <ListItemText primary={filterName} />
             </MenuItem>
           );
         })}
