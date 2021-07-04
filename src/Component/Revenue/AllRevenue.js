@@ -67,11 +67,13 @@ export default function AllRevenue() {
   const pageName = "AllRevenue";
   const componentRef = useRef();
   const [allRevenue, setAllRevenue] = useState();
-
+ const [filterDateTime,setFilterDateTime]=useState();
+ const [filterSelected,setFilterSelected]=useState();
   useEffect(() => {
     async function fetchAllRevenue() {
       setAllRevenue(MockDataAllRevenue.data);
-    }
+    } 
+
     fetchAllRevenue();
   }, []);
 
@@ -97,7 +99,13 @@ export default function AllRevenue() {
         container
         className={classes.FilterAction}
       >
-        <FilterList filterData={filter} />
+        <FilterList filterData={filter} onChange={(filterName,value) => {
+          setFilterDateTime(value);
+          setFilterSelected(filterName);
+          console.log(filterName)
+          console.log(value)
+          
+        }} />
         {allRevenue && (
           <ActionBar
             handlePrint={handlePrint}
@@ -115,10 +123,8 @@ export default function AllRevenue() {
     </Grid>
   ));
   return (
-    <React.Fragment>
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
   );
 }

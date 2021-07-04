@@ -109,10 +109,10 @@ export default function Frequency() {
     </Grid>
   ));
   return (
-    <React.Fragment>
+    
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
+    
   );
 }

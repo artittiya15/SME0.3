@@ -115,10 +115,10 @@ export default function Member() {
     </Grid>
   ));
   return (
-    <React.Fragment>
+    
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
+    
   );
 }

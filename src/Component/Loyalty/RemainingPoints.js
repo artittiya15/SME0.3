@@ -111,10 +111,10 @@ export default function RemainingPoints() {
     </Grid>
   ));
   return (
-    <React.Fragment>
+  
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
+    
   );
 }

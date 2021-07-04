@@ -112,10 +112,10 @@ export default function RevenueMember() {
     </Grid>
   ));
   return (
-    <React.Fragment>
+    
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
+    
   );
 }

@@ -18,12 +18,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: theme.spacing(3),
     overflowX: "hidden",
-    
   },
   container: {
     maxHeight: window.innerHeight - 350,
     color: "#828282",
-    boxShadow: "0px 5px 5px #ebebeb"
+    boxShadow: "0px 5px 5px #ebebeb",
   },
   footer: {
     display: "flex",
@@ -36,19 +35,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     zIndex: 999,
     fontWeight: 600,
-    position: "absolute"
+    position: "absolute",
   },
   ColorText: {
     color: "#828282",
-    
   },
   TextTableBody: {
     textAlign: "left",
   },
-  TableHeader:{boxShadow: "0px 5px 5px #ebebeb"
-
-  }
-  
+  TableHeader: { boxShadow: "0px 5px 5px #ebebeb" },
 }));
 const StyledTableRow = withStyles((i) => ({
   root: {
@@ -107,7 +102,29 @@ export default function AccessibleTable(props) {
             ))}
           </TableBody>
         </Table>
-        <Box className={classes.footer}>
+      </TableContainer>
+      <TableContainer style={{ position: "absolute", left: 0, bottom: 0, maxHeight: 50 }}>
+        <Table stickyHeader >
+          <TableHead className={classes.TableHeader}>
+            <TableRow>
+              {Object.entries(props.data.summarytier[0]).map(
+                ([_, val], index) => (
+                  <TableCell
+                    key={index}
+                  >
+                    <Typography noWrap style={{
+                      width: footer[index] ? footer[index] - 32 : 100,
+                      padding: 16,
+                      fontFamily: "sans-serif",
+                    }}>{val}</Typography>
+                  </TableCell>
+                )
+              )}
+            </TableRow>
+          </TableHead>
+        </Table>
+        {/* <Box className={classes.footer}>
+          <div style={{width: "100%"}}>
           {Object.entries(props.data.summarytier[0]).map(
             ([_, val], index) => (
               <Box
@@ -122,7 +139,8 @@ export default function AccessibleTable(props) {
               </Box>
             )
           )}
-        </Box>
+          </div>
+        </Box> */}
       </TableContainer>
     </Paper>
   );

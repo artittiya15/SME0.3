@@ -105,10 +105,8 @@ export default function TopBigSpender() {
     </Grid>
   ));
   return (
-    <React.Fragment>
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
   );
 }

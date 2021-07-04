@@ -10,6 +10,7 @@ import { withStyles, makeStyles } from "@material-ui/core/styles";
 import { DateRange } from "react-date-range";
 import Dialog from "@material-ui/core/Dialog";
 import { Grid } from "@material-ui/core";
+import moment from 'moment';
 
 const useStyles = makeStyles((theme) => ({
   FilterListIcon: {
@@ -89,7 +90,7 @@ const StyledMenu = withStyles({
   />
 ));
 
-export default function FilterList({ filterData }) {
+export default function FilterList({ filterData, onChange }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [filter, setFilter] = useState([]);
@@ -136,6 +137,10 @@ export default function FilterList({ filterData }) {
       return item;
     });
     setFilter([...nextValue]);
+    const formatDate = dateSelected[0];
+    formatDate.startDate = moment(formatDate.startDate).format("YYYY-MM-DD");
+    formatDate.endDate = moment(formatDate.endDate).format("YYYY-MM-DD");
+    onChange(filterName, formatDate);
   };
 
   useEffect(() => {

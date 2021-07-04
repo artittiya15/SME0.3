@@ -112,10 +112,8 @@ export default function TopProduct() {
     </Grid>
   ));
   return (
-    <React.Fragment>
       <Grid>
         <ComponentToPrint ref={componentRef} />
       </Grid>
-    </React.Fragment>
   );
 }
